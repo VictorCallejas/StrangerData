@@ -10,5 +10,5 @@
     <body>
         <h1>Prueba 1</h1>
     </body>
-
+<?php echo "hola mundo";?>
 </html>
