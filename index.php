@@ -15,7 +15,6 @@
     <body>
         <div class="container">
             <div class="hero-unit">
-            <h1>Prueba</h1>
                 <h2>This is probably not what you were expecting.</h2>
                 <p>To enjoy the full features from the <code>ebo-demo-php-simple-app</code> sample, you need to go to your Elastic Beanstlk environment, click Configuration and set your app's <strong>Document root</strong> to <strong>web</strong> and redeploy the app. Hurry back to see the real app at work!</p>
             </div>
