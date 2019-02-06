@@ -9,17 +9,17 @@
         <title>Stranger Data</title>
 
         <!-- FAVICON -->
-        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/...">
-        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/...">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon.png">
     </head>
 
     <body>
     <header>
-	   	<a href="index.php" id="home"><img src="images/home.png" alt="Inicio"></a>
+	   	<a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
 		<nav>
-			<a href="#" class="btn-nav">Aplicacion</a>
-			<a href="...php" class="btn-nav">Proyecto</a>
-			<a href="...php" class="btn-nav">Equipo</a>
+			<a href="aplicacion.php" class="btn-nav">Aplicacion</a>
+			<a href="proyecto.php" class="btn-nav">Proyecto</a>
+			<a href="equipo.php" class="btn-nav">Equipo</a>
 		</nav>
 	</header>
 	<!-- PROGRESS BAR -->
@@ -39,22 +39,48 @@
                 </div>
         </div>
     </div>
+		
+		
+		
+		
+		
+		
+		
+		
+	<!-- MANDAR EMAIL -->
+	<div class="modal1">
+	<div class="ventana" id="email_div">
+		<div class="email_formulario">
+			<form action="contact.php" method="post">
+	<label for="nombre" id="label_nombre">Nombre</label>
+	 <input id="nombre" type="text" name="nombre" placeholder="Nombre y Apellido" required="flase" />
+
+	 <label for="email" id="label_email">Email</label>
+	 <input id="email" type="email" name="email" placeholder="ejemplo@correo.com" required="true" />
+
+	 <label for="mensaje" id="label_mensaje">Mensaje</label>
+	 <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+
+	<input id="submit" type="submit" name="submit" value="Enviar" />
+		   </form>
+		</div>
+		<div class="cerrar">
+			<button class="cerrar_contact pointer">Cerrar</button>
+		</div>
+		</div>
+	</div>
     
     <!-- FOOTER -->
     <footer>
         <img src="assets/img/logo-cajamarhack.png" alt="Cajamar UniversityHack 2019">
         <img src="assets/img/logo-datalab.png" alt="Cajamar Datalab">
-        <div>
-            <p>Your best path</p>
-            <a href="mail.php" class="btn-nav">Contact us</a>
-        </div>
-        <img src="assets/img/logo_etsinf.png" alt="Escuela Superior de ingenieria informatica">
-        <img src="assets/img/logo_upv.png" alt="Universidad Politecnica de alencia">
+        <a href="mail.php" class="btn-nav" id="btn-contact">Contact us</a>
+        <img src="assets/img/logo-etsinf.png" alt="Escuela Superior de ingenieria informatica">
+        <img src="assets/img/logo-upv.png" alt="Universidad Politecnica de alencia">
     </footer>
     <!-- SCRIPTS -->
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/aplication.css">
 	<script type="text/javascript" src="js/main.js"></script>
     </body>
-<?php echo "hola mundo";?>
 </html>

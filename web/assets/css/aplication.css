@@ -12,6 +12,9 @@
 	background-attachment:fixed;
 	padding-top: 77px;
 }
+.aplication-main div {
+	width: 50%;
+}
 .mapa{
 	height: 100%;
 	width: 50%;
