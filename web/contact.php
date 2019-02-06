@@ -2,8 +2,8 @@
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
 $mensaje = $_POST['mensaje'];
-$para = 'admin@PeluRosaFuentes.com';
-$titulo = 'Peluqueria Web';
+$para = 'victorcf999@gmail.com';
+$titulo = 'Stranger Data Mail';
 $header = 'From: ' . $email;
 $msjCorreo = "Nombre: $nombre\n E-Mail: $email\n Mensaje:\n $mensaje";
   
