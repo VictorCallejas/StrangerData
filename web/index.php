@@ -72,7 +72,7 @@
     <!-- SCRIPTS -->
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/aplication.css">
-	<script type="text/javascript" src="assets/js/main.js"></script>
 	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
     </body>
 </html>
