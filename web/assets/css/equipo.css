@@ -1,0 +1,38 @@
+.main-equipo{
+	height: 100%;
+	width: 100%;
+	display: inline-flex;
+	align-content: space-around;
+	vertical-align: middle;
+}
+
+.miembro {
+	margin: auto;
+	text-align: center;
+}
+
+.miembro a img{
+	height: 300px;
+	border-radius: 300px;
+}
+
+.miembro a img:hover{
+	opacity: .75;
+}
+
+.miembro p{
+	margin-top: 20px;
+}
+
+@media(max-width:1050px){
+	.main-equipo{
+		height:900px;
+		display:flex;
+		flex-direction: column;
+	}
+	.miembro a img{
+	height: 200px;
+	border-radius: 200px;
+	}
+	
+}
