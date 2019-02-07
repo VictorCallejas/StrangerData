@@ -4,6 +4,7 @@
 	display: inline-flex;
 	align-content: space-around;
 	vertical-align: middle;
+	background-image:url(../img/o-byn-mapa.png);
 }
 
 .miembro {
@@ -22,6 +23,8 @@
 
 .miembro p{
 	margin-top: 20px;
+	font-weight: 700;
+	font-size: 20px;
 }
 
 @media(max-width:1050px){
