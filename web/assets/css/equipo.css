@@ -5,6 +5,7 @@
 	align-content: space-around;
 	vertical-align: middle;
 	background-image:url(../img/o-byn-mapa.png);
+	background-repeat: no-repeat;
 }
 
 .miembro {
