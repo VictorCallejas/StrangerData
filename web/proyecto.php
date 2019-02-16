@@ -70,6 +70,7 @@
         
     </footer>
     <!-- SCRIPTS -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/proyecto.css">
 	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>

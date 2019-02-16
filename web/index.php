@@ -14,20 +14,32 @@
     </head>
 
     <body>
-    <header>
-	   	<a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
-		<nav>
-			<a href="aplicacion.php" class="btn-nav">Aplicacion</a>
-			<a href="proyecto.php" class="btn-nav">Proyecto</a>
-			<a href="equipo.php" class="btn-nav">Equipo</a>
-		</nav>
-	</header>
+
+  <header> <a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
+	    <nav> <a href="aplicacion.php" class="btn-nav">Aplicacion</a> <a href="proyecto.php" class="btn-nav">Proyecto</a> <a href="equipo.php" class="btn-nav">Equipo</a> </nav>
+  </header>
 		
 		
-    
-    <div class="main">
+	<div class="content">
+		<div class="wrapper">
+			<img src="assets/img/favicon/favicon.png" alt="">
+			<a href="aplicacion.php" id="go-btn" class="btn-nav">Find it</a>
+		</div>
+			
+	</div>
 		
-    </div>
+	<section class="section section-dark">
+		  <h2>LA MEJOR OPCION</h2>
+			<p>
+				Encontramos el cajero/oficina que más te convenga según parámetros estáticos y dinámicos
+				<br>
+				Tipo de operación a realizar, tráfico según diferentes medios de transporte, colas en la oficina...
+			</p>
+	</section>
+		
+	<div class="media">
+		<img src="assets/img/back.gif">
+	</div>
 		
 		
 		
@@ -62,7 +74,8 @@
 			<img src="assets/img/logo-cajamarhack.png" alt="Cajamar UniversityHack 2019">
         	<img src="assets/img/logo-datalab.png" alt="Cajamar Datalab">
 		</div>
-        <a class="btn-nav pointer" id="btn-contact" title="Mandar email">Contact us</a>
+        <a title="Mandar email" class="pointer btn-nav" id="btn-contact">Contact us</a>
+        
 		<div class="footer-box">
 			<img src="assets/img/logo-etsinf.png" alt="Escuela Superior de ingenieria informatica">
         	<img src="assets/img/logo-upv.png" alt="Universidad Politecnica de alencia">
@@ -70,6 +83,7 @@
         
     </footer>
     <!-- SCRIPTS -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
 	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>

@@ -28,14 +28,14 @@
 <padding class="main">
 	<div class="main-equipo">
 		<div class="miembro">
-			<a href="https://www.linkedin.com/in/victor-callejas-fuentes/" target="_blank">
-				<img src="assets/img/equipo/victor-callejas.jpg" alt="Joaquin Montesinos">
+			<a href="https://www.linkedin.com/in/joaquin-montesinos/" target="_blank">
+				<img src="assets/img/equipo/joaquin-montesinos.jpeg" alt="Joaquin Montesinos">
 			</a>
 			<p class="nombre">Joaquin Montesinos</p>
 	    </div>
 		<div class="miembro">
-			<a href="https://www.linkedin.com/in/victor-callejas-fuentes/" target="_blank">
-				<img src="assets/img/equipo/victor-callejas.jpg" alt="Valeria Haro">
+			<a href="https://www.linkedin.com/in/valeriaharovalle/" target="_blank">
+				<img src="assets/img/equipo/valeria-haro.jpg" alt="Valeria Haro">
 			</a>
 			<p class="nombre">Valeria Haro</p>
 	    </div>		
@@ -89,9 +89,10 @@
         
 </footer>
     <!-- SCRIPTS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-<link rel="stylesheet" type="text/css" href="assets/css/equipo.css">
-<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="assets/js/main.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/equipo.css">
+	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>

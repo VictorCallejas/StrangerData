@@ -17,10 +17,14 @@
 .miembro a img{
 	height: 300px;
 	border-radius: 300px;
+    -webkit-filter: grayscale(30%);
+    filter: grayscale(30%);
+
 }
 
 .miembro a img:hover{
-	opacity: .75;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
 }
 
 .miembro p{

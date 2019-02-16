@@ -8,6 +8,7 @@
     -moz-appearance: none;
     appearance: none;
     text-decoration:none;
+	font-family: 'Roboto', sans-serif;
 }
 
 html,body{
@@ -98,7 +99,7 @@ header{
 }
 .cerrar_button:hover{
 	color:#000;
-	background-color: #f4f4f4;
+	background-color: #f56f3a;
 	border: 2px solid #000;
 }
 ventana{
@@ -117,7 +118,7 @@ ventana{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #f4f4f4;
+	background-color:#413B3B;
 	padding: 25px;
 	padding-bottom: 0px;
 	overflow-y:visible;
@@ -194,7 +195,7 @@ footer img{
 }
 #btn-contact{
 	height: 30px;
-	width: 210px;
+	min-width: 110px;
 	margin: auto;
 	background-color: #111111;
 	border-radius: 50px;
@@ -218,10 +219,15 @@ footer img{
     header nav{
         flex-flow:row wrap;  
     }
-    header nav a{
-        margin: 0px;
-    }
 }
+
+@media(max-width:450px){
+	.btn-nav{
+		margin: 0px 4px 0px 4px;
+		padding: 5px 7px 5px 7px;
+	}
+}
+
 @media(max-width:1150px){
 	.footer-box{
 		display: flex;
@@ -251,5 +257,6 @@ footer img{
 	#btn-contact{
 		width: 110px;
 		margin-top:30px;
+		text-align: center;
 	}
 }
