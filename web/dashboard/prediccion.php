@@ -123,7 +123,7 @@ var dia_url; ///dia de salida
 var numero_recomendaciones=5; //numero de resultados que quiere que le recomiende 
 
  
-var URL="http://localhost:8888/StrangerData/dashboard/respuestas.json?ubicado="+ubicado+"&latitud="+latitud_url+"&longitud="+longitud_url+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
+var URL="https://strangerdata.club/StrangerData/dashboard/respuestas.json?ubicado="+ubicado+"&latitud="+latitud_url+"&longitud="+longitud_url+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
 
   
  
@@ -139,8 +139,8 @@ var coche_url="";
 var transporte_publico_url="";
 var bici_url=""; 
 
-var URL_nearest="http://localhost:8888/StrangerData/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
- var URL_nearest_time="http://localhost:8888/StrangerData/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
+var URL_nearest="https://strangerdata.club/StrangerData/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
+ var URL_nearest_time="https://strangerdata.club/StrangerData/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
 
 
 var jArray;
@@ -158,14 +158,14 @@ var account_time=[];
  
 
 function actualizarURL(){
-	URL="http://localhost:8888/StrangerData/dashboard/respuesta.json?ubicado=si&latitud="+latitud_url+"&longitud="+longitud_url+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url;
+	URL="https://strangerdata.club/StrangerData/dashboard/respuesta.json?ubicado=si&latitud="+latitud_url+"&longitud="+longitud_url+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url;
 }
 
 function actualizar_nearest(){
-	URL_nearest="http://localhost:8888/StrangerData/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
+	URL_nearest="https://strangerdata.club/StrangerData/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
 }
 function actualizar_nearest_tiempo(){
-	 URL_nearest_time="http://localhost:8888/StrangerData/dashboard/respuesta_tiempo.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
+	 URL_nearest_time="https://strangerdata.club/StrangerData/dashboard/respuesta_tiempo.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
 }
 
 function to_min(s){
