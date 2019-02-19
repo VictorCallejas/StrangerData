@@ -3,9 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-
-     
     <link href="dashboard/css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
     <link href="dashboard/css/bootstrap-theme.css" rel="stylesheet">
@@ -54,38 +51,6 @@
     <script src="dashboard/js/d3.v3.min.js"></script>
     <script src="dashboard/js/radarChart.js"></script>    
    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyA_i6oWqxHiZThh7uzo9UZxg3gShyhqGvU"></script>
-
-<?php
-
-
-
-//$origin = "39.4688751,-3.3976791";
-//$destination = "39.688751,-3.3976791"; 
-$request="https://maps.googleapis.com/maps/api/directions/json?origin=";
-$request.=$origin;
-$request.="&destination=";
-$request.=$destination;
-//$request.="&mode=walking&key=AIzaSyA_i6oWqxHiZThh7uzo9UZxg3gShyhqGvU";
-
-$jsondata = file_get_contents($request);
-$response_a = json_decode($jsondata);
-$datanumber =  sizeof($response_a->routes[0]->legs[0]->steps);
-
-
-for ($i = 0; $i < $datanumber; $i++) {
-  $steps[$i] = (string)$response_a->routes[0]->legs[0]->steps[$i]->start_location->lat;
-  $steps[$i] .= ",";
-  $steps[$i] .= (string)$response_a->routes[0]->legs[0]->steps[$i]->start_location->lng;
-}
-$steps[$datanumber] = $destination;
-
-
-include 'conexionbbdd.php';
- 
-//$query  = "SELECT * FROM cajeros limit 10";
-//$query2  = "SELECT * FROM oficinas limit 10";
-?>     
-
 
 <script>   
 var map;
@@ -190,12 +155,6 @@ function to_min(s){
   }
 }
  
-//console.log(Date(1399995076));
-/*var myDate="26-02-2012";
-			myDate=myDate.split("-");
-			var newDate=myDate[1]+"/"+myDate[0]+"/"+myDate[2];
-			console.log(new Date(newDate).getTime()); */ 
-
 /*******Posibilidades********/
 //Libreta 
 $.ajaxSetup({cache: false });
@@ -223,10 +182,7 @@ $(document).ready(function() {
       					   destination_longitud=destination_latitud_val[i];
       					   destination_latitud=destination_longitud_val[i];
                			actualizar_nearest_tiempo();
-                    actualizar_nearest()
-               			//console.log(i+ ":" +URL_nearest);
-               			//console.log(i+ ":" +destination_longitud);
-               			//console.log(i+ ":" +destination_latitud);
+                    actualizar_nearest();
                		
        		   			request_URL_nearest[i] = $.get(URL_nearest, function(respuesta){
       		    			steps=respuesta;
@@ -248,12 +204,7 @@ $(document).ready(function() {
                            console.log("3: " +request_URL_nearest[i].responseText);
                        }
                        
-                       //ordeno descendiente
-
-                      console.log("yeeee:" + account_time.indexOf(Math.max.apply(Math,account_time)));
-                      // account_time = account_time.sort(function(a, b){return b-a});
-                      //  console.log(account_time);
-                      
+                     //  console.log("apunta a:" + account_time.indexOf(Math.max.apply(Math,account_time))); 
 
               //aqui meto para llamar a los puntos del recorrido. Puedo crearme que meta todos los recorridos rojo el bueno y azul 
                       
@@ -377,38 +328,7 @@ function initMap() {
        path[z].push(marker.getPosition()); //PUSH THE NEWLY CREATED MARKER'S POSITION TO THE PATH ARRAY
     }
  
- 
-
-<?php
-/* ejecutar multi consulta */
-if ($mysqli->multi_query($query)) {
-    do {
-        /* almacenar primer juego de resultados */
-         if ($result = $mysqli->store_result()) {
-            while ($row = $result->fetch_row()) {
- 
-              echo "showMarkerByLatLng(new google.maps.LatLng(". $row[9] . "," . $row[10] . "), false);";
-             }
-        }
-    } while ($mysqli->next_result());
-}
-/* ejecutar multi consulta */
-if ($mysqli->multi_query($query2)) {
-    do {
-        /* almacenar primer juego de resultados */
-         if ($result = $mysqli->store_result()) {
-            while ($row = $result->fetch_row()) {
-              echo "showMarkerByLatLng2(new google.maps.LatLng(". $row[8] . "," . $row[9] . "), false);";
-             }
-        }
-    } while ($mysqli->next_result());
-}
-
-
-/* cerrar conexión */
-$mysqli->close();
-?>
-
+  
 
 
   function showMarkerByLatLng(pos, infoWindowTitle,infoWindowText,imageMarker){
