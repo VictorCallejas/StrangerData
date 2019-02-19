@@ -1,22 +1,4 @@
-<!DOCTYPE text>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="dashboard/css/bootstrap.min.css" rel="stylesheet">
-    <!-- bootstrap theme -->
-    <link href="dashboard/css/bootstrap-theme.css" rel="stylesheet">
-    <!--external css-->
-    <!-- font icon -->
-    <link href="dashboard/css/elegant-icons-style.css" rel="stylesheet" />
-    <link href="dashboard/css/font-awesome.min.css" rel="stylesheet" />
-    <!-- Custom styles -->
-    <link href="dashboard/css/style.css" rel="stylesheet">
-    <link href="dashboard/css/style-responsive.css" rel="stylesheet" />
-    <link href="dashboard/style4.css" rel="stylesheet">
-
-   </head>
-  <body>
+ 
   <!-- container section start -->
   <section id="container" class="">
       <section id="main-content" style="min-width:100%;min-height:100%;margin-left:0px;">
@@ -386,9 +368,5 @@ function initMap() {
  window.onload = initMap;
 
 </script>
-
-     
-  </body>
-</html>
 
  

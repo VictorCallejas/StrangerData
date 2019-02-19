@@ -6,6 +6,19 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+ 		    <link href="dashboard/css/bootstrap.min.css" rel="stylesheet">
+		    <!-- bootstrap theme -->
+		    <link href="dashboard/css/bootstrap-theme.css" rel="stylesheet">
+		    <!--external css-->
+		    <!-- font icon -->
+		    <link href="dashboard/css/elegant-icons-style.css" rel="stylesheet" />
+		    <link href="dashboard/css/font-awesome.min.css" rel="stylesheet" />
+		    <!-- Custom styles -->
+		    <link href="dashboard/css/style.css" rel="stylesheet">
+		    <link href="dashboard/css/style-responsive.css" rel="stylesheet" />
+		    <link href="dashboard/style4.css" rel="stylesheet">
+
+
         <title>Stranger Data</title>
 
         <!-- FAVICON -->
