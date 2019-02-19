@@ -15,8 +15,14 @@
 
     <body>
 
-  <header> <a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
-	    <nav> <a href="aplicacion.php" class="btn-nav">Aplicacion</a> <a href="proyecto.php" class="btn-nav">Proyecto</a> <a href="equipo.php" class="btn-nav">Equipo</a> </nav>
+  <header>
+	  <a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
+	    <nav>
+			<a href="aplicacion.php" class="btn-nav">Aplicacion</a>
+			<a href="respuesta.php" class="btn-nav">Respuestas</a>
+			<a href="tecnologia.php" class="btn-nav">Tecnologia</a> 
+			<a href="equipo.php" class="btn-nav">Equipo</a> 
+	  </nav>
   </header>
 		
 		
@@ -24,8 +30,7 @@
 		<div class="wrapper">
 			<img src="assets/img/favicon/favicon.png" alt="">
 			<a href="aplicacion.php" id="go-btn" class="btn-nav">Find it</a>
-		</div>
-			
+		</div>	
 	</div>
 		
 	<section class="section section-dark">

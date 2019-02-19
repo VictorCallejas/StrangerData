@@ -13,8 +13,8 @@
         <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon.png">
     </head>
 
-<body>
-<header>
+    <body>
+    <header>
 	   	<a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
 		<nav>
 			<a href="aplicacion.php" class="btn-nav">Aplicacion</a>
@@ -25,36 +25,64 @@
 	</header>
 		
 		
-    
-<padding class="main">
-	<div class="main-equipo">
-		<div class="miembro">
-			<a href="https://www.linkedin.com/in/joaquin-montesinos/" target="_blank">
-				<img src="assets/img/equipo/joaquin-montesinos.jpeg" alt="Joaquin Montesinos">
-			</a>
-			<p class="nombre">Joaquin Montesinos</p>
-	    </div>
-		<div class="miembro">
-			<a href="https://www.linkedin.com/in/valeriaharovalle/" target="_blank">
-				<img src="assets/img/equipo/valeria-haro.jpg" alt="Valeria Haro">
-			</a>
-			<p class="nombre">Valeria Haro</p>
-	    </div>		
-		<div class="miembro">
-			<a href="https://www.linkedin.com/in/victor-callejas-fuentes/" target="_blank">
-				<img src="assets/img/equipo/victor-callejas.jpg" alt="Victor Callejas">
-			</a>
-			<p class="nombre">Víctor Callejas Fuentes</p>
-	    </div>		
-    </div>
-</padding>
+	<div class="main">
 		
+	<h2>Arquitectura</h2>
+		<div class="wrapper" id="wrapper_arq">
+			<img id="estructura_img" src="assets/img/arq.png" alt="Arquitectura">
+			<a href="https://s3.us-east-2.amazonaws.com/strangerdata/arq.png" id="go-btn" class="btn-nav">Find it</a>
+		</div>
+		<h4>Infraestructura</h4>
+		<div class="wrapper">
+			<img id="aws_img" src="assets/img/aws.png" alt="Amazon Web Services">
+			<img id="heroku_img" src="assets/img/heroku.png" alt="Heroku">
+		</div>
 		
+	<h2>Tecnologias</h2>
+		<h4>Fuentes de datos</h4>
+		<div class="wrapper">
+			<img id="caja_img" src="assets/img/logo-datalab.png" alt="Cajamar Datalab">
+			<img src="assets/img/agencia_tributaria.png" alt="Agencia Tributaria">
+		</div>
+		<h4>Analisis de datos</h4>
+		<div class="wrapper">
+			<img src="assets/img/R.svg.png" alt="R Programming Languaje">
+			<img src="assets/img/jupyter.png" alt="Jupyter Notebooks">
+		</div>
+		<h4>Visualizacion de los datos</h4>
+		<div class="wrapper">
+			<img src="assets/img/ggplot2.png" alt="R Studio ggplot2">
+			<img src="assets/img/metabase.png" alt="Metabase">
+		</div>
+		<h4>Frontend</h4>
+		<div class="wrapper">
+			<img id="front_img" src="assets/img/html5png.webp" alt="HTML CSS Jacascript">
+		</div>
+		<h4>Backend</h4>
+		<div class="wrapper" id="back_wrapper">
+			<div>
+			<img id="js_img" src="assets/img/js.png" alt="Javascript">
+			<img src="assets/img/php.png" alt="PHP">
+			<img src="assets/img/python.svg" alt="Python">
+			</div>
+			<div id="back2">
+			<img src="assets/img/flask.png" alt="Flask">
+			<img id="neo_img" src="assets/img/neo4j.png" alt="Neo4j">
+			</div>
+		</div>
+		<h4>Database</h4>
+		<div class="wrapper">
+			<img src="assets/img/mysql.png" alt="MySQL">
+		</div>
+		<h4>APIs</h4>
+		<div class="wrapper">
+			<img id="maps_img" src="assets/img/googlemaps.png" alt="Google Maps API">
+			<img src="assets/img/directions.png" alt="Google Directions API">
+		</div>
+	</div>
 		
-		
-		
-<!-- MANDAR EMAIL -->
-<div class="modal1">
+	<!-- MANDAR EMAIL -->
+	<div class="modal1">
 	<div class="ventana" id="email_div">
 		<div class="email_formulario">
 			<form action="contact.php" method="post">
@@ -81,19 +109,19 @@
 		<div class="footer-box">
 			<img src="assets/img/logo-cajamarhack.png" alt="Cajamar UniversityHack 2019">
         	<img src="assets/img/logo-datalab.png" alt="Cajamar Datalab">
-	  </div>
+		</div>
         <a class="btn-nav pointer" id="btn-contact" title="Mandar email">Contact us</a>
 		<div class="footer-box">
 			<img src="assets/img/logo-etsinf.png" alt="Escuela Superior de ingenieria informatica">
         	<img src="assets/img/logo-upv.png" alt="Universidad Politecnica de alencia">
 		</div>
         
-</footer>
+    </footer>
     <!-- SCRIPTS -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/equipo.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/proyecto.css">
 	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
-</body>
+    </body>
 </html>
