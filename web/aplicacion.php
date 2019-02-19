@@ -16,8 +16,7 @@
 		    <!-- Custom styles -->
 		    <link href="dashboard/css/style.css" rel="stylesheet">
 		    <link href="dashboard/css/style-responsive.css" rel="stylesheet" />
-		    <link href="dashboard/style4.css" rel="stylesheet">
-
+ 
 
         <title>Stranger Data</title>
 
