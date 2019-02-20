@@ -27,7 +27,24 @@
 		
     
 	<div class="main-equipo">
-		
+		<div class="miembro">
+			<a href="https://www.linkedin.com/in/joaquin-montesinos/" target="_blank">
+				<img src="assets/img/equipo/joaquin-montesinos.jpeg" alt="Joaquin Montesinos">
+			</a>
+			<p class="nombre">Joaquin Montesinos</p>
+	    </div>
+		<div class="miembro">
+			<a href="https://www.linkedin.com/in/valeriaharovalle/" target="_blank">
+				<img src="assets/img/equipo/valeria-haro.jpg" alt="Valeria Haro">
+			</a>
+			<p class="nombre">Valeria Haro</p>
+	    </div>		
+		<div class="miembro">
+			<a href="https://www.linkedin.com/in/victor-callejas-fuentes/" target="_blank">
+				<img src="assets/img/equipo/victor-callejas.jpg" alt="Victor Callejas">
+			</a>
+			<p class="nombre">Víctor Callejas Fuentes</p>
+	    </div>		
 	</div>
 		
 		
