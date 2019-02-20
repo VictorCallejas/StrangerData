@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">        
+        <title>Stranger Data</title>
+
+        <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyA_i6oWqxHiZThh7uzo9UZxg3gShyhqGvU"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+    <body>
+    	<h1>TEST UBICACION</h1>
+
+<p id="location"></p>
+
+<p><input type="radio" name="locationOption" onclick="handleClickLocation(this);" value="1" />Current Location</p>
+<p><input type="radio" name="locationOption" onclick="handleClickLocation(this);" value="2" /> Choose Location</p>
+
+<input id="text_direccion" type="textbox" name="Direccion" onchange="getLocation()" style="visibility: hidden"/>
+<button id="button_direccion" onclick="searchAddress()" style="visibility: hidden">Search Address</button>
+
+
+<script>
+var x = document.getElementById("location");
+var latitud ;
+var longitud;
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  latitud = position.coords.latitude;
+  longitud = position.coords.longitude;
+  x.innerHTML = "Latitude: " + latitud + 
+  "<br>Longitude: " + longitud;
+}
+
+
+var currentValue = 0;
+function handleClickLocation(locationOption) {
+	if (locationOption.value == 1){
+    	getLocation();
+    	}
+    else{
+    	document.getElementById("text_direccion").style.visibility = "visible";
+    	    	document.getElementById("button_direccion").style.visibility = "visible";
+    	}
+}
+
+function searchAddress(){
+	var direccion = document.getElementById("text_direccion").value;
+	var request = new httpRequest();
+	request.method = "GET";
+	request.url = "https://maps.googleapis.com/maps/api/geocode/json?address="+direccion+"&key=AIzaSyA_i6oWqxHiZThh7uzo9UZxg3gShyhqGvU";
+
+	//create callback for success containing the response
+	request.success = function(response) {
+	    console.log(response);
+	};
+
+	//and a fail callback containing the error
+	request.fail = function(error) {
+	    console.log(error);
+	};
+
+}
+
+</script>
+    	    </body>
+</html>
