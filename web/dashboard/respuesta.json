@@ -1,0 +1,5 @@
+{"cajeros":[
+	{"cajero":1, "longitud": 39.3688751, "latitutud":-3.3976291, "nombre": "ALMERIA-PASEO", "direccion": "PS DE ALMERIA 00075", "poblacion": "ALmeria", "estado_estimado": "alto" , "tiempo": 50 },
+	{"cajero":2, "longitud":39.4688751, "latitutud":-3.3876791, "nombre": "ALMERIA-PASEO", "direccion": "PS DE ALMERIA 00075", "poblacion": "ALmeria", "estado_estimado": "bajo", "tiempo": 70 },
+	{"cajero":3, "longitud":39.2688751, "latitutud":-3.3876791, "nombre": "ALMERIA-PASEO", "direccion": "PS DE ALMERIA 00075", "poblacion": "ALmeria", "estado_estimado": "bajo", "tiempo": 150 }
+]}
