@@ -1,14 +1,33 @@
+ <br><br><br>
+<h1> Opciones de recomendación de ruta </h1>
+
+<h2> Ubicación: </h2>
+<div> <input type="checkbox" value="10" id="Ubicacion_Actual" />Ubicación actual </div>
+<div> <input type="textbox" id="Ubicacion_Diferente" />Añada la ubicación de origen </div>
  
-<h1> Opciones de ruta </h1>
-<h2> Prefiero </h2>
+<h2> Busco: </h2>
+<div> <input type="checkbox" value="8" id="Busca_Oficina" />Busca Oficina </div>
+<div> <input type="checkbox" value="9" id="Busca_Cajero" />Busca Cajero </div> 
+
+<h2> Busco entidades que tengan: </h2>
 <div> <input type="checkbox" value="1" id="Libreta" />Libreta </div>
 <div> <input type="checkbox" value="2" id="Ingreso" />Ingreso </div>
- <h2 > Rutas </h2>
-<input  type="radio"  name="rutas" id="red"/>  Mejor ruta <br>
-<input  type="radio"  name="rutas" id="pink"/>  Mejor ruta <br>
+<div> <input type="checkbox" value="3" id="Recibos" />Recibos </div>
+<div> <input type="checkbox" value="4" id="Contactless" />Contactless </div>
+<div> <input type="checkbox" value="5" id="Transferencia" />Transferencia </div>
+<div> <input type="checkbox" value="6" id="Extraer" />Extraer </div>
+<div> <input type="checkbox" value="7" id="Con_Saldo" />Con Saldo </div>
+
+ <h2 > Como desea ir: </h2>
+<input  type="radio"  name="rutas" id="Coche"/> Coche <br>
+<input  type="radio"  name="rutas" id="andando"/> Andando <br>
+<input  type="radio"  name="rutas" id="transporte_publico"/> Transporte Público <br>
+<input  type="radio"  name="rutas" id="bici"/> Bici <br>
+
                       
- 
-<div style="height:70%; width:100%;" id="map"></div>
+  <br><br><br>
+
+<div style="height:700px; width:1000px;" id="map"></div>
 
     <!-- javascripts -->
     <script src="dashboard/js/jquery.js"></script>
@@ -38,8 +57,6 @@ var request_URL_nearest_length;
 var account_time=[];
 //////////// parametros back
 var ubicado="no"; //si es si, significa que coge la latitud y longitud, si es no, solo muestra cajeros de españa dependiendo de los parametros que elija, si/no
-var latitud_url=""; //latitud de orijen del usuario (ubicado=si) tipo double
-var longitud_url=""; //longitud de orijen del usuario (ubicado=si) tipo double
 var libreta_url="si"; //cajeros que permiten libreta, si/no
 var ingreso_url="si"; //cajeros que permiten ingreso, si/no
 var recibos_url="si"; //cajeros que permiten recibos, si/no
@@ -62,10 +79,11 @@ var destination_latitud_val=[];
 var destination_longitud_val=[];
 var destination_latitud=0;
 var destination_longitud=0;
-var andando_url="";
-var coche_url="";
-var transporte_publico_url="";
-var bici_url=""; 
+var coche_url="si";
+var andando_url="no";
+var transporte_publico_url="no";
+var bici_url="no"; 
+var URL; 
 
 
 ///////// api back
@@ -92,7 +110,7 @@ function actualizar_nearest(){
 function actualizar_nearest_tiempo(){
 	 URL_nearest_time="http://localhost:8888/StrangerData/web/dashboard/respuesta_tiempo.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
 }
-
+//// funcion text to min
 function to_min(s){
   console.log(s);
   if(s!=null){
@@ -114,88 +132,89 @@ function to_min(s){
     return min;
   }
 }
+
+function maestra(URL){
+      //actualiza parametros de la url
+      actualizarURL_si();
+      actualizarURL_no();
+      //llama a al api con los parametros de origen
+      request_URL_nearest_length = $.get(URL, function(ss){
+        console.log(ss);
+      });
+      //cuando se tenga respuest, entoces selecciona lat y long que seran de destino
+      $.when(request_URL_nearest_length).done(function(msg) {
+          for(var i=0; i<request_URL_nearest_length.responseJSON.cajeros.length; i++){
+             destination_latitud_val[i] = request_URL_nearest_length.responseJSON.cajeros[i].latitud; //valeria
+           destination_longitud_val[i] = request_URL_nearest_length.responseJSON.cajeros[i].longitud; //valeria
+          }
+          //llamo x n veces al api de google para obtener tiempo y camino
+          for(var i=0; i<request_URL_nearest_length.responseJSON.cajeros.length; i++){       
+               destination_longitud=destination_latitud_val[i];
+               destination_latitud=destination_longitud_val[i];
+                actualizar_nearest_tiempo();
+                actualizar_nearest();          
+              request_URL_nearest[i] = $.get(URL_nearest, function(respuesta){
+                steps=respuesta;
+              });
+              request_duration_URL_nearest[i] = $.get(URL_nearest_time, function(respuesta){
+                step_duration=respuesta;
+              }); 
+          }
+          //cuando se traiga todos los parametros de la llamada al api de google, entoces es el momento de saber cual es el cajero mas cercano segun ponderaciones
+          $.when(request_URL_nearest[request_URL_nearest.length-1], request_duration_URL_nearest[request_duration_URL_nearest.length-1]).done(function(msg2) {
+                  console.log(request_duration_URL_nearest);
  
-/*******Posibilidades********/
-//Libreta 
+                  for(var i=0; i<request_duration_URL_nearest.length; i++){
+                     account_time[i]= request_URL_nearest_length.responseJSON.cajeros[i].estado_estimado + to_min(request_duration_URL_nearest[i].responseText);
+                       console.log("3: " +account_time[i]);
+                       console.log("3: " +request_URL_nearest[i].responseText);
+                   }
+  
+          //selecciono el cajero mas cercano, sabiendo la posicion del array del mejor ponderado
+                  
+                  for(var i=0; i<request_duration_URL_nearest.length; i++){
+                    if(i==account_time.indexOf(Math.max.apply(Math,account_time))){
+                       jArray = JSON.parse(request_URL_nearest[i].responseText);
+                    }                       
+                  }
+
+          /// todos los puntos del camino.
+                  for(var i=0; i<jArray.length; i++){
+                      var aux = jArray[i];
+                      var str = aux.split(',');
+                      var lat = parseFloat(str[0]);
+                      latitud_makers[i] = lat;
+                      var long = parseFloat(str[1]);
+                      longitud_makers[i] = long;
+                      markers[i] = new google.maps.LatLng(latitud_makers[i], longitud_makers[i]); 
+                   }
+          ///punto unicial y final
+                 punto_final_no_tocar = {lat: latitud_makers[jArray.length-1], lng: longitud_makers[jArray.length-1]};
+                 punto_inicial_no_tocar = {lat: latitud_makers[0], lng: longitud_makers[0]};
+          ////inicializo el mapa
+                 initMap();
+
+          });
+        });
+}
+
+function maestra_no_ubicado(URL){}
+ 
+//guardo setup de las llamadas ajax, para que no me almacene en cache.
 $.ajaxSetup({cache: false, dataType: "jsonp", crossDomain: true });
 
+/*******Posibilidades********/
+//Libreta 
 $(document).ready(function() {
     //set initial state.
     $('#Libreta').change(function() {
         if($(this).is(":checked")) {
-        	latitud_url="SI";
-         	actualizarURL_si();
-         	request_URL_nearest_length = $.get( URL_si, function(ss){
-         		console.log(ss);
-			});
-
-         	$.when(request_URL_nearest_length).done(function(msg) {
-  	     			for(var i=0; i<request_URL_nearest_length.responseJSON.cajeros.length; i++){
-  	      			 destination_latitud_val[i] = request_URL_nearest_length.responseJSON.cajeros[i].latitud; //valeria
-  	     			 destination_longitud_val[i] = request_URL_nearest_length.responseJSON.cajeros[i].longitud; //valeria
-  	     			}
- 
- 
- 	          	//llamo x n veces al api de google para obtener tiempo y camino
-       				for(var i=0; i<request_URL_nearest_length.responseJSON.cajeros.length; i++){
-      					   
-      					   destination_longitud=destination_latitud_val[i];
-      					   destination_latitud=destination_longitud_val[i];
-               			actualizar_nearest_tiempo();
-                    actualizar_nearest();
-               		
-       		   			request_URL_nearest[i] = $.get(URL_nearest, function(respuesta){
-      		    			steps=respuesta;
-      		 		   	});
-      		 		   	request_duration_URL_nearest[i] = $.get(URL_nearest_time, function(respuesta){
-      		    			step_duration=respuesta;
-       		 		   	}); 
-      				}
-  				    //cuando se traiga todos los parametros de la llamada, entoces
-      	 			$.when(request_URL_nearest[request_URL_nearest.length-1], request_duration_URL_nearest[request_duration_URL_nearest.length-1]).done(function(msg2) {
-      	 				  	//console.log(request_URL_nearest);
-      						  console.log(request_duration_URL_nearest);
-
-                    
-       
-          	 				  for(var i=0; i<request_duration_URL_nearest.length; i++){
-                         account_time[i]= request_URL_nearest_length.responseJSON.cajeros[i].estado_estimado + to_min(request_duration_URL_nearest[i].responseText);
-                           console.log("3: " +account_time[i]);
-                           console.log("3: " +request_URL_nearest[i].responseText);
-                       }
-                       
-                     //  console.log("apunta a:" + account_time.indexOf(Math.max.apply(Math,account_time))); 
-
-              //aqui meto para llamar a los puntos del recorrido. Puedo crearme que meta todos los recorridos rojo el bueno y azul 
-                      
-                      for(var i=0; i<request_duration_URL_nearest.length; i++){
-                        if(i==account_time.indexOf(Math.max.apply(Math,account_time))){
-                           jArray = JSON.parse(request_URL_nearest[i].responseText);
-
-                        }                       
-                      }
-
-                      for(var i=0; i<jArray.length; i++){
-                          var aux = jArray[i];
-                          var str = aux.split(',');
-                          var lat = parseFloat(str[0]);
-                          latitud_makers[i] = lat;
-                          var long = parseFloat(str[1]);
-                          longitud_makers[i] = long;
-                          markers[i] = new google.maps.LatLng(latitud_makers[i], longitud_makers[i]); 
-                       }
-
-
-                     punto_final_no_tocar = {lat: latitud_makers[jArray.length-1], lng: longitud_makers[jArray.length-1]};
-                     punto_inicial_no_tocar = {lat: latitud_makers[0], lng: longitud_makers[0]};
-                     initMap();
-
-      				});
-			 });
-        	          }else{
-          //console.log("uncheck");
-          //  latitud_url="nofuck";
-          //	console.log(URL);
+          libreta_url="si";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);  console.log(URL_no);
+}
+        }else{
+          libreta_url="no";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
         }
      });
 });
@@ -204,23 +223,123 @@ $(document).ready(function() {
     //set initial state.
     $('#Ingreso').change(function() {
         if($(this).is(":checked")) {
-             console.log("check");
+          ingreso_url="si";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
         }else{
-          console.log("uncheck");
+          ingreso_url="no";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
         }
      });
 });
-
-
-
-
+//Recibos 
+$(document).ready(function() {
+    //set initial state.
+    $('#Recibos').change(function() {
+        if($(this).is(":checked")) {
+          recibos_url="si";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }else{
+          recibos_url="no";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }
+     });
+});
+//Contactless 
+$(document).ready(function() {
+    //set initial state.
+    $('#Contactless').change(function() {
+        if($(this).is(":checked")) {
+          contactless_url="si";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }else{
+          contactless_url="no";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }
+     });
+});
+//Transferencia 
+$(document).ready(function() {
+    //set initial state.
+    $('#Transferencia').change(function() {
+        if($(this).is(":checked")) {
+          transferencia_url="si";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }else{
+          transferencia_url="no";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }
+     });
+});
+//Extraer 
+$(document).ready(function() {
+    //set initial state.
+    $('#Extraer').change(function() {
+        if($(this).is(":checked")) {
+          extraer_url="si";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }else{
+          extraer_url="no";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }
+     });
+});
+//Con Saldo 
+$(document).ready(function() {
+    //set initial state.
+    $('#Con_Saldo').change(function() {
+        if($(this).is(":checked")) {
+          con_saldo_url="si";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }else{
+          con_saldo_url="no";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }
+     });
+});
+//Busca Oficina 
+$(document).ready(function() {
+    //set initial state.
+    $('#Busca_Oficina').change(function() {
+        if($(this).is(":checked")) {
+          busca_oficina_url="si";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }else{
+          busca_oficina_url="no";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }
+     });
+});
+//Busca Cajero 
+$(document).ready(function() {
+    //set initial state.
+    $('#Busca_Cajero').change(function() {
+        if($(this).is(":checked")) {
+          busca_cajero_url="si";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }else{
+          busca_cajero_url="no";
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }
+     });
+});
+ 
+//FALTA
+//Pertenece_Banco
+//Busca_Bancos
+//Dispuesto
+//Hora
+//DIA
+//Numero de Recomendaciones
 
 </script>
 
 
+
+
+
 <script> 
 
- 
+///mapa
 function initMap() {
     var customMapTypeId = "night_mode_style"
     var zoom = 0;
