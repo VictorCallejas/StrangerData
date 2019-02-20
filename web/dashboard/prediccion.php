@@ -1,38 +1,19 @@
  
-  <!-- container section start -->
-  <section id="container" class="">
-      <section id="main-content" style="min-width:100%;min-height:100%;margin-left:0px;">
-            <div id="DIV_16"> <!-- Recuadro izquierda -->
-                <div id="DIV_22"><!-- azul oscuro -->
-                  <h1 id="H1_23"> Opciones de ruta </h1>
-                  <div id="DIV_24">                       
-                    <div id="DIV_26">
-                      <div id="DIV_27">
-                        <h2 id="H2_28"> Prefiero </h2>
-                        <div> <input type="checkbox" value="1" id="Libreta" />Libreta </div>
-                        <div> <input type="checkbox" value="2" id="Ingreso" />Ingreso </div>
-                       </div>
-                      <div id="DIV_57">
-                        <h2 id="H2_58"> Rutas </h2>
-                        <input  type="radio"  name="rutas" id="red"/>  Mejor ruta <br>
-                        <input  type="radio"  name="rutas" id="pink"/>  Mejor ruta <br>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>   
-                 <div class="col-lg-12" style="min-height:100%;margin-right:0px; padding:0px;">
-                  <div style="height:80%; width:100%;" id="map"></div>
-                </div>
-         </section>
-   </section> 
+<h1> Opciones de ruta </h1>
+<h2> Prefiero </h2>
+<div> <input type="checkbox" value="1" id="Libreta" />Libreta </div>
+<div> <input type="checkbox" value="2" id="Ingreso" />Ingreso </div>
+ <h2 > Rutas </h2>
+<input  type="radio"  name="rutas" id="red"/>  Mejor ruta <br>
+<input  type="radio"  name="rutas" id="pink"/>  Mejor ruta <br>
+                      
+ 
+<div style="height:70%; width:100%;" id="map"></div>
+
     <!-- javascripts -->
     <script src="dashboard/js/jquery.js"></script>
-    <script src="dashboard/js/bootstrap.min.js"></script>
-    <script src="dashboard/js/jquery-ui-1.9.2.custom.min.js"></script>
-    <script src="dashboard/js/d3.v3.min.js"></script>
-    <script src="dashboard/js/radarChart.js"></script>    
-   <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyA_i6oWqxHiZThh7uzo9UZxg3gShyhqGvU"></script>
+     <script src="dashboard/js/jquery-ui-1.9.2.custom.min.js"></script>
+     <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyA_i6oWqxHiZThh7uzo9UZxg3gShyhqGvU"></script>
 
 <script>   
 var map;
@@ -41,40 +22,40 @@ var bounds;
 var polyline;
 var valor_baston= 0;
 var markers = [];
- var latitud_makers = [];
+var latitud_makers = [];
 var longitud_makers = [];
 var posicion_general = 0;
 var posicion_inicial=0;
 var posicion_final=0;
 var steps= [];
 var step_duration= [];
-
-
+var jArray;
+var punto_final_no_tocar;
+var punto_inicial_no_tocar;
+var request_URL_nearest=[];
+var request_duration_URL_nearest=[];
+var request_URL_nearest_length;
+var account_time=[];
+//////////// parametros back
 var ubicado="no"; //si es si, significa que coge la latitud y longitud, si es no, solo muestra cajeros de españa dependiendo de los parametros que elija, si/no
 var latitud_url=""; //latitud de orijen del usuario (ubicado=si) tipo double
 var longitud_url=""; //longitud de orijen del usuario (ubicado=si) tipo double
-var libreta_url=""; //cajeros que permiten libreta, si/no
-var ingreso_url=""; //cajeros que permiten ingreso, si/no
-var recibos_url=""; //cajeros que permiten recibos, si/no
-var contactless_url=""; //cajeros que permiten contactless, si/no
-var transferencia_url=""; //cajeros que permiten transferencias, si/no
-var extraer_url=""; //cajeros que permiten extraer, si/no
-var con_saldo_url=""; //cajeros que permiten contactless, si/no
-var busca_oficina_url=""; //el usuario está buscanto oficinas, si/no
-var busca_cajero_url=""; //el usuario está buscanto cajeros, si/no
+var libreta_url="si"; //cajeros que permiten libreta, si/no
+var ingreso_url="si"; //cajeros que permiten ingreso, si/no
+var recibos_url="si"; //cajeros que permiten recibos, si/no
+var contactless_url="no"; //cajeros que permiten contactless, si/no
+var transferencia_url="si"; //cajeros que permiten transferencias, si/no
+var extraer_url="si"; //cajeros que permiten extraer, si/no
+var con_saldo_url="si"; //cajeros que permiten contactless, si/no
+var busca_oficina_url="si"; //el usuario está buscanto oficinas, si/no
+var busca_cajero_url="no"; //el usuario está buscanto cajeros, si/no
 var pertenece_banco_url="cajamar"; //el usuario pertenece al banco ... cajamar,santander, ...
-var busca_bancos_url=""; //el usuario solo busca bancos de la entidad... ???? este no se si ponerlo
-var dispuesto_url=""; //dispuesto a pagar de comision, 0, 0.65, 2 
-var hora_url; ///hora de salida
-var dia_url; ///dia de salida
+var busca_bancos_url="cajamar"; //el usuario solo busca bancos de la entidad... ???? este no se si ponerlo
+var dispuesto_url=0.65; //dispuesto a pagar de comision, 0, 0.65, 2 
+var hora_url=11; ///hora de salida
+var dia_url="2019-02-15"; ///dia de salida
 var numero_recomendaciones=5; //numero de resultados que quiere que le recomiende 
-
- 
-var URL="https://strangerdata.club/StrangerData/dashboard/respuestas.json?ubicado="+ubicado+"&latitud="+latitud_url+"&longitud="+longitud_url+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
-
-  
- 
-
+////////// parametros front
 var origin_latitud=39.4248751;
 var origin_longitud=-3.3976291;
 var destination_latitud_val=[];
@@ -86,33 +67,30 @@ var coche_url="";
 var transporte_publico_url="";
 var bici_url=""; 
 
-var URL_nearest="https://strangerdata.club/StrangerData/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
- var URL_nearest_time="https://strangerdata.club/StrangerData/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
 
+///////// api back
+var URL_no="http://13.58.140.28:5000/nearest?ubicado=no&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
+var URL_si="http://13.58.140.28:5000/nearest?ubicado=si&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
 
-var jArray;
-var punto_final_no_tocar;
-var punto_inicial_no_tocar;
-var request_URL_nearest=[];
-var request_duration_URL_nearest=[];
-var request_URL_nearest_length;
-var account_time=[];
-
-</script>
-
-<script> 
+/////// api front
+var URL_nearest="http://localhost:8888/StrangerData/web/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
+ var URL_nearest_time="http://localhost:8888/StrangerData/web/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
 
  
-
-function actualizarURL(){
-	URL="https://strangerdata.club/StrangerData/dashboard/respuesta.json?ubicado=si&latitud="+latitud_url+"&longitud="+longitud_url+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url;
+/////// actualizarURL_si
+function actualizarURL_si(){
+  URL_no="http://13.58.140.28:5000/nearest?ubicado=no&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
+}
+/////// actualizarURL_no
+function actualizarURL_no(){
+  URL_si="http://13.58.140.28:5000/nearest?ubicado=si&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
 }
 
 function actualizar_nearest(){
-	URL_nearest="https://strangerdata.club/StrangerData/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
+	URL_nearest="http://localhost:8888/StrangerData/web/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
 }
 function actualizar_nearest_tiempo(){
-	 URL_nearest_time="https://strangerdata.club/StrangerData/dashboard/respuesta_tiempo.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
+	 URL_nearest_time="http://localhost:8888/StrangerData/web/dashboard/respuesta_tiempo.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
 }
 
 function to_min(s){
@@ -139,21 +117,21 @@ function to_min(s){
  
 /*******Posibilidades********/
 //Libreta 
-$.ajaxSetup({cache: false });
+$.ajaxSetup({cache: false, dataType: "jsonp", crossDomain: true });
 
 $(document).ready(function() {
     //set initial state.
     $('#Libreta').change(function() {
         if($(this).is(":checked")) {
         	latitud_url="SI";
-         	actualizarURL();
-         	request_URL_nearest_length = $.get( URL, function(ss){
+         	actualizarURL_si();
+         	request_URL_nearest_length = $.get( URL_si, function(ss){
          		console.log(ss);
 			});
 
          	$.when(request_URL_nearest_length).done(function(msg) {
   	     			for(var i=0; i<request_URL_nearest_length.responseJSON.cajeros.length; i++){
-  	      			 destination_latitud_val[i] = request_URL_nearest_length.responseJSON.cajeros[i].latitutud; //valeria
+  	      			 destination_latitud_val[i] = request_URL_nearest_length.responseJSON.cajeros[i].latitud; //valeria
   	     			 destination_longitud_val[i] = request_URL_nearest_length.responseJSON.cajeros[i].longitud; //valeria
   	     			}
  
@@ -181,7 +159,7 @@ $(document).ready(function() {
                     
        
           	 				  for(var i=0; i<request_duration_URL_nearest.length; i++){
-                         account_time[i]= request_URL_nearest_length.responseJSON.cajeros[i].tiempo + to_min(request_duration_URL_nearest[i].responseText);
+                         account_time[i]= request_URL_nearest_length.responseJSON.cajeros[i].estado_estimado + to_min(request_duration_URL_nearest[i].responseText);
                            console.log("3: " +account_time[i]);
                            console.log("3: " +request_URL_nearest[i].responseText);
                        }
@@ -217,8 +195,7 @@ $(document).ready(function() {
         	          }else{
           //console.log("uncheck");
           //  latitud_url="nofuck";
-         //	actualizarURL();
-         //	console.log(URL);
+          //	console.log(URL);
         }
      });
 });
