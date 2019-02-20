@@ -34,6 +34,14 @@
      <script src="dashboard/js/jquery-ui-1.9.2.custom.min.js"></script>
      <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyA_i6oWqxHiZThh7uzo9UZxg3gShyhqGvU"></script>
 
+
+
+<?php
+include 'conexionbbdd.php';
+ 
+$query  = "SELECT * FROM cajeros limit 10";
+//$query2  = "SELECT * FROM oficinas limit 10";
+?>  
 <script>   
 var map;
 var layer;
