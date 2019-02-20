@@ -28,7 +28,9 @@
 		
 		
 	<div class="main">
-		
+		<?php
+  require_once('dashboard/prediccion.php'); 
+?>    
 	</div>	
 		
 		
