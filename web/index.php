@@ -31,19 +31,21 @@
 			<img src="assets/img/favicon/favicon.png" alt="">
 			<a href="aplicacion.php" id="go-btn" class="btn-nav">Find it</a>
 		</div>	
-	</div>
+	
 		
 	<section class="section section-dark">
 		  <h2>LA MEJOR OPCION</h2>
 			<p>
-				Encontramos el cajero/oficina que más te convenga según parámetros estáticos y dinámicos
+				Encontramos el cajero/oficina que más te <br>según parámetros estáticos y dinámicos
 				<br>
-				Tipo de operación a realizar, tráfico según diferentes medios de transporte, colas en la oficina...
+				<br>
+				Tenemos en cuenta cajeros de <strong>70 entidades diferentes</strong> y sus respectivos <strong>convenios</strong>,<br> <strong>tiempos de espera</strong> en la oficina...
+				<br>
+				<br>
+				<strong>Tipo de operación</strong> a realizar,<br> <strong>tráfico</strong> según diferentes medios de transporte...
 			</p>
 	</section>
 		
-	<div class="media">
-		<img src="assets/img/back.gif">
 	</div>
 		
 	<!-- MANDAR EMAIL -->

@@ -52,7 +52,6 @@
 		<h4>Visualizacion de los datos</h4>
 		<div class="wrapper">
 			<img src="assets/img/ggplot2.png" alt="R Studio ggplot2">
-			<img src="assets/img/metabase.png" alt="Metabase">
 		</div>
 		<h4>Frontend</h4>
 		<div class="wrapper">
