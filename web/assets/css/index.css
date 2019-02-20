@@ -31,8 +31,7 @@ body{
 }
 
 #go-btn:hover {
-	background-color:#553311;
-	color:#000000;
+	opacity: .8;
 }
 .media{
 	display:flex;
@@ -46,17 +45,21 @@ body{
 	text-align: center;
 	padding: 50px 80px;
 }
-.section-light{
-	background-color:#f4f4f4;
-	color:#666;
-}
-.section-light h2{
-	margin-bottom: 20px;
-}
+
 .section-dark h2{
 	margin-bottom: 20px;
 }
 .section-dark{
 	background-color:#282e34;
 	color:#ddd;
+}
+
+@media(max-width:600px){
+	.media img{
+		height: 350px;
+		width: 300px;
+	}
+	.section{
+		padding: 30px 45px;
+	}
 }
