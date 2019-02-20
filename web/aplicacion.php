@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-         <title>Stranger Data</title>
+        <title>Stranger Data</title>
 
         <!-- FAVICON -->
         <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon.png">
@@ -18,24 +18,16 @@
 	   	<a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
 		<nav>
 			<a href="aplicacion.php" class="btn-nav">Aplicacion</a>
-			<a href="respuesta.php" class="btn-nav">Proyecto</a>
+			<a href="proyecto.php" class="btn-nav">Proyecto</a>
 			<a href="equipo.php" class="btn-nav">Equipo</a>
 		</nav>
 	</header>
-		  
-<?php
-  require_once('dashboard/prediccion.php'); 
-?>    
-
-
-
-
-
-
-
-
-
-
+		
+		
+    
+    <div class="main">
+		
+    </div>
 		
 		
 		
@@ -81,16 +73,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/aplication.css">
-		<link href="dashboard/css/bootstrap.min.css" rel="stylesheet">
-		    <!-- bootstrap theme -->
-		    <link href="dashboard/css/bootstrap-theme.css" rel="stylesheet">
-		    <!--external css-->
-		    <!-- font icon -->
-		    <link href="dashboard/css/elegant-icons-style.css" rel="stylesheet" />
-		    <link href="dashboard/css/font-awesome.min.css" rel="stylesheet" />
-		    <!-- Custom styles -->
-		    <link href="dashboard/css/style.css" rel="stylesheet">
-		    <link href="dashboard/css/style-responsive.css" rel="stylesheet" />
 	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
     </body>

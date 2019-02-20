@@ -13,8 +13,8 @@
         <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon.png">
     </head>
 
-<body>
-<header>
+    <body>
+    <header>
 	   	<a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
 		<nav>
 			<a href="aplicacion.php" class="btn-nav">Aplicacion</a>
@@ -25,35 +25,16 @@
 		
 		
     
-<padding class="main">
-	<div class="main-equipo">
-		<div class="miembro">
-			<a href="https://www.linkedin.com/in/joaquin-montesinos/" target="_blank">
-				<img src="assets/img/equipo/joaquin-montesinos.jpeg" alt="Joaquin Montesinos">
-			</a>
-			<p class="nombre">Joaquin Montesinos</p>
-	    </div>
-		<div class="miembro">
-			<a href="https://www.linkedin.com/in/valeriaharovalle/" target="_blank">
-				<img src="assets/img/equipo/valeria-haro.jpg" alt="Valeria Haro">
-			</a>
-			<p class="nombre">Valeria Haro</p>
-	    </div>		
-		<div class="miembro">
-			<a href="https://www.linkedin.com/in/victor-callejas-fuentes/" target="_blank">
-				<img src="assets/img/equipo/victor-callejas.jpg" alt="Victor Callejas">
-			</a>
-			<p class="nombre">Víctor Callejas Fuentes</p>
-	    </div>		
+    <div class="main">
+		
     </div>
-</padding>
 		
 		
 		
 		
 		
-<!-- MANDAR EMAIL -->
-<div class="modal1">
+	<!-- MANDAR EMAIL -->
+	<div class="modal1">
 	<div class="ventana" id="email_div">
 		<div class="email_formulario">
 			<form action="contact.php" method="post">
@@ -80,19 +61,19 @@
 		<div class="footer-box">
 			<img src="assets/img/logo-cajamarhack.png" alt="Cajamar UniversityHack 2019">
         	<img src="assets/img/logo-datalab.png" alt="Cajamar Datalab">
-	  </div>
+		</div>
         <a class="btn-nav pointer" id="btn-contact" title="Mandar email">Contact us</a>
 		<div class="footer-box">
 			<img src="assets/img/logo-etsinf.png" alt="Escuela Superior de ingenieria informatica">
         	<img src="assets/img/logo-upv.png" alt="Universidad Politecnica de alencia">
 		</div>
         
-</footer>
+    </footer>
     <!-- SCRIPTS -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/equipo.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/proyecto.css">
 	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
-</body>
+    </body>
 </html>
