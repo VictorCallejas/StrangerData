@@ -36,12 +36,6 @@
 
 
 
-<?php
-include 'conexionbbdd.php';
- 
-$query  = "SELECT * FROM cajeros limit 10";
-//$query2  = "SELECT * FROM oficinas limit 10";
-?>  
 <script>   
 var map;
 var layer;
