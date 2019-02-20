@@ -46,10 +46,6 @@
 		<img src="assets/img/back.gif">
 	</div>
 		
-		
-		
-		
-		
 	<!-- MANDAR EMAIL -->
 	<div class="modal1">
 	<div class="ventana" id="email_div">

@@ -25,12 +25,12 @@
 	</header>
 		
 		
-	<div class="main">
+	<div class="main2">
 		
 	<h2>Arquitectura</h2>
 		<div class="wrapper" id="wrapper_arq">
 			<img id="estructura_img" src="assets/img/arq.png" alt="Arquitectura">
-			<a href="https://s3.us-east-2.amazonaws.com/strangerdata/arq.png" id="go-btn" class="btn-nav">Find it</a>
+			<a href="https://s3.us-east-2.amazonaws.com/strangerdata/arq.png" id="go-btn" class="btn-nav">Ver</a>
 		</div>
 		<h4>Infraestructura</h4>
 		<div class="wrapper">
@@ -60,15 +60,12 @@
 		</div>
 		<h4>Backend</h4>
 		<div class="wrapper" id="back_wrapper">
-			<div>
+		
 			<img id="js_img" src="assets/img/js.png" alt="Javascript">
 			<img src="assets/img/php.png" alt="PHP">
 			<img src="assets/img/python.svg" alt="Python">
-			</div>
-			<div id="back2">
 			<img src="assets/img/flask.png" alt="Flask">
-			<img id="neo_img" src="assets/img/neo4j.png" alt="Neo4j">
-			</div>
+		
 		</div>
 		<h4>Database</h4>
 		<div class="wrapper">

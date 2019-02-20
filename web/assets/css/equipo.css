@@ -1,5 +1,5 @@
 .main-equipo{
-	height: 100%;
+	min-height: 100%;
 	width: 100%;
 	display: inline-flex;
 	align-content: space-around;
@@ -35,7 +35,6 @@
 
 @media(max-width:1050px){
 	.main-equipo{
-		height:900px;
 		display:flex;
 		flex-direction: column;
 	}

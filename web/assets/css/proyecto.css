@@ -1,3 +1,8 @@
+.main2{
+	min-height: 100%;
+
+	
+}
 body {
 	color: #ffffff;
 	background: #232f3d;
@@ -78,7 +83,7 @@ h4{
 	#estructura_img{
 		display:none;
 	}
-	#back_wrapper{
+	.wrapper{
 		display: block;
 	}
 	

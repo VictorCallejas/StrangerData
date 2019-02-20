@@ -26,7 +26,6 @@
 		
 		
     
-<padding class="main">
 	<div class="main-equipo">
 		<div class="miembro">
 			<a href="https://www.linkedin.com/in/joaquin-montesinos/" target="_blank">
@@ -46,9 +45,7 @@
 			</a>
 			<p class="nombre">Víctor Callejas Fuentes</p>
 	    </div>		
-    </div>
-</padding>
-		
+	</div>
 		
 		
 		
