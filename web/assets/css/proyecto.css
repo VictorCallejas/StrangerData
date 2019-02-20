@@ -1,10 +1,85 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
+body {
+	color: #ffffff;
+	background: #232f3d;
+}
+h4, h2{
+	width: 100%;
+	text-align: center;
+}
+h2{
+	font-size: 40px;
+	margin: 30px 0px 30px 0px;
+}
+h4{
+	font-size: 25px;
+	margin: 20px 0px 20px 0px;
+}
+.wrapper{
+	width: 100%;
+	display: inline-flex;
+	justify-content: center;
+	padding: 40px;
+	text-align: center;
+}
+.wrapper img{
+    margin: 0px 50px 0px 50px;
+	width: 150px;
+	height: 150px;
+}
+#estructura_img{
+	height: 800px;
+	width: 1300px;
+}
+#go-btn{
+    background-color: #FF942B;
+	color: #ffffff;
+	border-radius: 50px;
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	font-size: 40px;
+	margin: auto;
+	display: none;
+}
 
-<body>
-</body>
-</html>
+#go-btn:hover {
+	opacity: .8;
+}
+
+#front_img{
+	width: 270px;
+}
+#js_img{
+	width: 200px;
+}
+#neo_img{
+	width: 270px;
+}
+#caja_img{
+	width: 250px;
+}
+#aws_img{
+	width: 300px;
+}
+#heroku_img{
+	width: 300px;
+}
+#maps_img{
+	width: 200px;
+}
+#back2{
+	margin-top: 50px;
+}
+
+@media(max-width:1500px){
+	#go-btn{
+		display: block;
+	}
+	#estructura_img{
+		display:none;
+	}
+	#back_wrapper{
+		display: block;
+	}
+	
+}

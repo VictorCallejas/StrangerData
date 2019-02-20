@@ -18,16 +18,30 @@
 	   	<a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
 		<nav>
 			<a href="aplicacion.php" class="btn-nav">Aplicacion</a>
-			<a href="proyecto.php" class="btn-nav">Proyecto</a>
+			<a href="respuesta.php" class="btn-nav">Respuestas</a>
+			<a href="tecnologia.php" class="btn-nav">Tecnologia</a>
 			<a href="equipo.php" class="btn-nav">Equipo</a>
 		</nav>
 	</header>
 		
 		
-    
-    <div class="main">
+	<div class="main">
 		
-    </div>
+	<h2>Arquitectura</h2>
+		<div class="wrapper" id="wrapper_arq">
+			<img id="estructura_img" src="assets/img/arq.png" alt="Arquitectura">
+			<a href="aplicacion.php" id="go-btn" class="btn-nav">Find it</a>
+		</div>
+	</div>
+		
+	<h2>Tecnologias</h2>
+		<h4>Analisis de datos</h4>
+		<div class="wrapper">
+			<img src="assets/img/R.svg.png" alt="R Programming Languaje">
+			<img src="assets/img/jupyter.png" alt="Jupyter Notebooks">
+		</div>
+	</div>
+		
 		
 		
 		
