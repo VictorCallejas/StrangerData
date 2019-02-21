@@ -550,7 +550,7 @@ function initMap() {
         var pos = markers[i];
           var marker = new google.maps.Marker({
             position: pos,             
-            icon: { url: "http://maps.google.com/mapfiles/ms/icons/none.png"},
+            icon: { url: "https://maps.google.com/mapfiles/ms/icons/none.png"},
             map: map
         });
        path[z].push(marker.getPosition()); //PUSH THE NEWLY CREATED MARKER'S POSITION TO THE PATH ARRAY
@@ -601,7 +601,7 @@ function initMap() {
       myMarker1.setPosition(pos);
 
       if(imageMarker2!=false){
-      myMarker1.setIcon("http://maps.google.com/mapfiles/ms/icons/blue-dot.png");
+      myMarker1.setIcon("https://maps.google.com/mapfiles/ms/icons/blue-dot.png");
       }
       
    
