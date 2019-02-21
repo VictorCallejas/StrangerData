@@ -6,26 +6,7 @@ $destination_longitud = $_GET["destination_longitud"];
 $origin = $origin_latitud.",".$origin_longitud;
 $destination = $destination_latitud.",".$destination_longitud;
 
- 
-$andando = $_GET["andando"];
-$coche = $_GET["coche"];
-$transporte_publico = $_GET["transporte_publico"];
-$bici = $_GET["bici"];
-
-if ($andando=="si"){
-	$mode = "walking";
-}else if ($coche=="si"){
-	$mode = "driving";
-}else if ($transporte_publico=="si"){
-	$mode = "driving";
-} else if ($bici=="si"){
-	$mode = "bicycling";
-}else{
-	$mode = "walking";
-}
-
-
-//$mode="walking"; //"available_travel_modes" : [ "DRIVING", "BICYCLING", "WALKING" ],
+$mode="walking"; //"available_travel_modes" : [ "DRIVING", "BICYCLING", "WALKING" ],
 $request="https://maps.googleapis.com/maps/api/directions/json?origin=";
 $request.=$origin;
 $request.="&destination=";
