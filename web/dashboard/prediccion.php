@@ -195,10 +195,12 @@ var URL_nearest="https://strangerdata.club/dashboard/respuesta.php?origin_latitu
 /////// actualizarURL_si
 function actualizarURL_si(){
   URL_no="https://qmiets.tk:5000/nearest?ubicado=no&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
+	console.log(URL_no);
 }
 /////// actualizarURL_no
 function actualizarURL_no(){
   URL_si="https://qmiets.tk:5000/nearest?ubicado=si&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
+	console.log(URL_si);
 }
 
 function actualizar_nearest(){
@@ -232,8 +234,8 @@ function to_min(s){
 
 function maestra(URL){
       //actualiza parametros de la url
-      console.log(actualizarURL_si());
-      console.log(actualizarURL_no());
+      actualizarURL_si();
+      actualizarURL_no();
 
       //llama a al api con los parametros de origen
       request_URL_nearest_length = $.get(URL, function(ss){
