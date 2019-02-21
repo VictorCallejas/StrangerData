@@ -25,10 +25,83 @@
 	</header>
 		
 		
-	<div class="main">
+	<div id="main-r">
 		
+	<h2>La historia que cuentan los datos</h2>	
 		
+	<div class="media">
+		<img class="r-img" src="assets/img/r/e3.png" alt="">
+	</div>
+		
+	<section class="section section-light">
+		  <h3>Menores tiempos de espera para rentas altas</h3>
+			<p>
+				Las oficinas en zonas cuyas rentas son mayores de 35.000€, <br>sus tiempos de espera en las oficinas son menores que aquellas que estan en zonas con rentas mas bajas.
+			</p>
+		<a href="https://s3.us-east-2.amazonaws.com/strangerdata/Estudio-ocupacion-renta.ipynb">Download R Jupyter Notebook</a>
+	</section>
+<div class="media">
+		<img class="r-img" src="assets/img/r/e1.png" alt="">
+		<img class="r-img" src="assets/img/r/e2.png" alt="">
+	</div>
+		
+	<section class="section section-light">
+		  <h3>Cajeros rotos y la renta</h3>
+			<p>
+				En la primera gráfica se muestra el número de fallos del total de cajeros por horas. Las horas en las que más fallan son las 8 de la mañana y al medio dia. <br>Estas horas coinciden con las de <strong>mantenimiento y actualizacion</strong> de los cajeros.
+				<br>
+				En el segundo gráfico se muestra la media del tiempo inoperativo de los cajeros agrupados por codigo postal según la renta media de esa zona. <br>Se observa que <b>no existe ninguna relación</b>.
+			</p>
+		<a href="https://s3.us-east-2.amazonaws.com/strangerdata/Estudio-cajerosRotos.ipynb">Download R Jupyter Notebook</a>
+	</section>
+		
+	<div class="media">
+		<img class="r-img" src="assets/img/r/e9.png" alt="">
+	</div>
+		
+	<section class="section section-light">
+		  <h3>Ves a la oficina a última hora</h3>
+			<p>
+				En el gráfico se muestra el tiempo de espera medio según la hora del día. El tiempo de espera <b>se mantiene constante</b> a lo largo de la mañana y desciende desde la una de la mañana hasta que cierra la oficina, usualmente a las 14:00.
+			</p>
+		<a href="https://s3.us-east-2.amazonaws.com/strangerdata/Estudio-Ocupacion.ipynb">Download R Jupyter Notebook</a>
+	</section>
+		
+	<div class="media">
+		<img class="r-img" src="assets/img/r/e7.png" alt="">
+		<img class="r-img" src="assets/img/r/e8.png" alt="">
+	</div>
 	
+	<section class="section section-light">
+		  <h3>Mejor los viernes</h3>
+			<p>
+				Hay una <strong>ligera tendencia negativa</strong> de la ocupacion a lo largo de los dias de la semana.
+				<br>
+				La diferencia entre ir un viernes a las 14:00 y un lunes a las 9:00 es de casi 10 minutos.
+			</p>
+		<a href="https://s3.us-east-2.amazonaws.com/strangerdata/Estudio-Ocupacion.ipynb">Download R Jupyter Notebook</a>
+	</section>
+		
+	<div class="media">
+		<img class="r-img" src="assets/img/r/e5.png" alt="">
+		<img class="r-img" src="assets/img/r/e6.png" alt="">
+	</div>
+		
+	<section class="section section-light">
+		  <h3>No todos los meses son iguales, ni los dias</h3>
+			<p>
+				En los meses de <strong>julio, agosto y septiembre</strong> los tiempos de espera son menores.
+				<br>
+				Más importante es el día del mes.
+				Es mejor ir <strong>a mediados del mes</strong>. Los días con más ocupación son los primeros del mes seguidos de los últimos dias del mes.
+			</p>
+		<a href="https://s3.us-east-2.amazonaws.com/strangerdata/Estudio-Ocupacion.ipynb">Download R Jupyter Notebook</a>
+	</section>
+		
+	<div class="media">
+		<img class="r-img" src="assets/img/r/e4.png" alt="">
+	</div>
+		
 	</div>
 		
 		
@@ -75,7 +148,7 @@
     <!-- SCRIPTS -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/proyecto.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/respuesta.css">
 	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
     </body>

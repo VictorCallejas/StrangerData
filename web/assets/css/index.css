@@ -9,8 +9,9 @@ body{
 	height: 100%;
 	width: 100%;
 	display:flex;
-	justify-content:center;
+	justify-content:space-around;
 	align-items:center;
+	padding: 0% 10%;
 }
 .wrapper{
 	width: 300px;
@@ -33,17 +34,11 @@ body{
 #go-btn:hover {
 	opacity: .8;
 }
-.media{
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	width:100%;
-	height:100%;
-}
 
 .section{
 	text-align: center;
 	padding: 50px 80px;
+
 }
 
 .section-dark h2{
@@ -52,14 +47,30 @@ body{
 .section-dark{
 	background-color:#282e34;
 	color:#ddd;
+	min-width: 400px;
+	max-width: 35%;
+	padding: 50px 25px;
 }
 
-@media(max-width:600px){
-	.media img{
-		height: 350px;
-		width: 300px;
-	}
-	.section{
+@media(max-width:1050px){
+
+	.content{
+		height: 200%;
+		display: flex;
 		padding: 30px 45px;
+		flex-direction: column;
 	}
+	
 }
+
+@media(max-width:550px){
+
+.section-dark{
+	background-color:#282e34;
+	color:#ddd;
+	min-width: 300px;
+	padding: 30px 15px;
+}
+	
+}
+
