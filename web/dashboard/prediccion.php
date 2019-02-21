@@ -536,12 +536,12 @@ function initMap() {
      
      var markador = new google.maps.Marker({
     position: punto_final_no_tocar,
-    icon: { url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"},
+    icon: { url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"},
     map: map
    });
    var markador = new google.maps.Marker({
     position: punto_inicial_no_tocar,
-    icon: { url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"},
+    icon: { url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"},
     map: map
    });
  
