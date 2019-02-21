@@ -1,129 +1,129 @@
 
 <div id="map-box">
-	<div id="map"></div>
+  <div id="map"></div>
 </div>
 
 
 <div id="filtros">
-	<div id="filtros-box">
-	
+  <div id="filtros-box">
+  
 
 
 
-	<h2> Ubicación: </h2>
-	<div class="grupo">
-	<div class="pretty p-switch p-fill">
+  <h2> Ubicación: </h2>
+  <div class="grupo">
+  <div class="pretty p-switch p-fill">
         <input type="radio" name="switch11" id="Ubicacion" />
         <div class="state p-success">
             <label>Usar ubicacion actual</label>
         </div>
-	</div>
-		
-	<!--<div class="pretty p-switch p-fill">
+  </div>
+    
+  <!--<div class="pretty p-switch p-fill">
         <input type="checkbox" id="pac-input" class="controls" type="text" placeholder="Añada la ubicación de origen"/>
         <div class="state">
             <label>Fill</label>
         </div>
     </div>-->
-	</div>
-	
-	
+  </div>
+  
+  
 
-	<h2> Busco: </h2>
-	<div class="grupo">
-	<div class="pretty p-switch p-fill">
+  <h2> Busco: </h2>
+  <div class="grupo">
+  <div class="pretty p-switch p-fill">
         <input type="radio" name="switch10" id="Busca_Oficina"/>
         <div class="state p-success">
             <label>Busca Oficina</label>
         </div>
     </div>
-	<div class="pretty p-switch p-fill">
+  <div class="pretty p-switch p-fill">
         <input type="radio" name="switch9" id="Busca_Cajero"/>
         <div class="state p-success">
             <label>Busca Cajero</label>
         </div>
     </div>
-	</div>
+  </div>
 
-	<h2> Busco entidades que tengan: </h2>
-	<div class="grupo">
-	<div class="pretty p-switch p-fill">
+  <h2> Busco entidades que tengan: </h2>
+  <div class="grupo">
+  <div class="pretty p-switch p-fill">
         <input type="radio" name="switch8" id="Libreta"/>
         <div class="state p-success">
         <label>Libreta</label>
         </div>
     </div>
-			<div class="pretty p-switch p-fill">
+      <div class="pretty p-switch p-fill">
         <input type="radio" name="switch7" id="Ingreso"/>
         <div class="state p-success">
             <label>Ingreso</label>
         </div>
     </div>
-			<div class="pretty p-switch p-fill">
+      <div class="pretty p-switch p-fill">
         <input type="radio" name="switch6" id="Recibos"/>
         <div class="state p-success">
             <label>Recibos</label>
         </div>
     </div>
-			<div class="pretty p-switch p-fill">
+      <div class="pretty p-switch p-fill">
         <input type="radio" name="switch5" id="Contactless"/>
         <div class="state p-success">
             <label>Contactless</label>
         </div>
     </div>
-			<div class="pretty p-switch p-fill">
+      <div class="pretty p-switch p-fill">
         <input type="radio" name="switch4" id="Transferencia"/>
         <div class="state p-success">
             <label>Transferencia</label>
         </div>
     </div>
-			<div class="pretty p-switch p-fill">
+      <div class="pretty p-switch p-fill">
         <input type="radio" name="switch3" id="Extraer"/>
         <div class="state p-success">
             <label>Extraer</label>
         </div>
     </div>
-			<div class="pretty p-switch p-fill">
+      <div class="pretty p-switch p-fill">
         <input type="radio" name="switch2" id="Con_Saldo"/>
         <div class="state p-success">
             <label>Consultar saldo</label>
         </div>
     </div>
-	</div>
+  </div>
 
-	<h2> Como desea ir: </h2>
-	<div class="grupo">
-	<div class="pretty p-switch p-fill">
+  <h2> Como desea ir: </h2>
+  <div class="grupo">
+  <div class="pretty p-switch p-fill">
         <input type="radio" name="switch1" id="Coche"/>
         <div class="state p-success">
             <label>Coche</label>
         </div>
     </div>
-			<div class="pretty p-switch p-fill">
+      <div class="pretty p-switch p-fill">
         <input type="radio" name="switch1" id="andando"/>
         <div class="state p-success">
             <label>Andando</label>
         </div>
     </div>
-			<div class="pretty p-switch p-fill">
+      <div class="pretty p-switch p-fill">
         <input type="radio" name="switch1" id="transporte_publico"/>
         <div class="state p-success">
             <label>Transporte Público</label>
         </div>
-		</div>
-		<div class="pretty p-switch p-fill">
+    </div>
+    <div class="pretty p-switch p-fill">
         <input type="radio" name="switch1" id="bici"/>
         <div class="state p-success">
             <label>Bicicleta</label>
         </div>
-		</div>
-	</div>
+    </div>
+  </div>
 
-	
-	</div>
-	
+  
+  </div>
+  
 </div>
-		
+    
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_i6oWqxHiZThh7uzo9UZxg3gShyhqGvU"></script>
 
 <script>   
@@ -192,31 +192,31 @@ var URL_si="https://qmiets.tk:5000/nearest?ubicado=si&latitud="+origin_latitud+"
 
 /////// api front
 var URL_nearest="https://strangerdata.club/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
- var URL_nearest_time="https://strangerdata.club/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
+ var URL_nearest_time="https://strangerdata.club/dashboard/respuesta_tiempo.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
 
  
 /////// actualizarURL_si
 function actualizarURL_si(){
   URL_no="https://qmiets.tk:5000/nearest?ubicado=no&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
-	//console.log(URL_no);
+  //console.log(URL_no);
 }
 /////// actualizarURL_no
 function actualizarURL_no(){
   URL_si="https://qmiets.tk:5000/nearest?ubicado=si&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
-	console.log(URL_si);
+  console.log(URL_si);
 }
 
 function actualizar_nearest(){
-	URL_nearest="https://strangerdata.club/dashboard/respuesta_tiempo.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
+  URL_nearest="https://strangerdata.club/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
 }
 function actualizar_nearest_tiempo(){
-	 URL_nearest_time="https://strangerdata.club/dashboard/respuesta_tiempo.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
+   URL_nearest_time="https://strangerdata.club/dashboard/respuesta_tiempo.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
 }
 //// funcion text to min
 function to_min(s){
   console.log(s);
   if(s!=null){
-  	var s = s.substring(1,s.length-1);
+    var s = s.substring(1,s.length-1);
        s = s.split(' ');
       var min = 0;
       for(i = 1;i<s.length;i+=2){
@@ -239,6 +239,7 @@ function maestra(URL){
       //actualiza parametros de la url
        actualizarURL_si();
       actualizarURL_no();
+
       //llama a al api con los parametros de origen
       request_URL_nearest_length = $.get(URL, function(ss){
         console.log(ss);
@@ -279,8 +280,12 @@ function maestra(URL){
                        jArray = JSON.parse(request_URL_nearest[i].responseText);
                     }                       
                   }
+
                   markers=[];
                   bounds = new google.maps.LatLngBounds();
+
+
+
           /// todos los puntos del camino.
                   for(var i=0; i<jArray.length; i++){
                       var aux = jArray[i];
@@ -292,9 +297,12 @@ function maestra(URL){
                       markers[i] = new google.maps.LatLng(latitud_makers[i], longitud_makers[i]); 
                       bounds.extend(markers[i]);
                    }
+
           ///punto unicial y final
                  punto_final_no_tocar = {lat: latitud_makers[jArray.length-1], lng: longitud_makers[jArray.length-1]};
                  punto_inicial_no_tocar = {lat: latitud_makers[0], lng: longitud_makers[0]};
+
+
           ////inicializo el mapa
           ubicado="si";
           bound_activo=1;
@@ -352,7 +360,6 @@ $(document).ready(function(){
 $(document).ready(function() {
     //set initial state.
     $('#Ubicacion').change(function() {
-      console.log("entra");
         if($(this).is(":checked")) {
 
             ubicado="si"; 
@@ -367,6 +374,8 @@ $(document).ready(function() {
           if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
         }else{
             ubicado="no"; 
+                  console.log(" no entra");
+
           if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
         }
      });
@@ -649,8 +658,6 @@ function initMap() {
           myMarker1InfoWindow.open(map, myMarker1);
       });
   }
-        console.log("entra");
-
 }
  
  window.onload = initMap;
