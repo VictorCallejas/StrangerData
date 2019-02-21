@@ -9,13 +9,13 @@
         <title>Stranger Data</title>
 
         <!-- FAVICON -->
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-min.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-min.png">
     </head>
 
 <body>
 <header>
-	   	<a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
+	   	<a href="index.php" id="home"><img src="assets/img/strangerData-min.png" alt="Inicio"></a>
 		<nav>
 			<a href="aplicacion.php" class="btn-nav">Aplicacion</a>
 			<a href="respuesta.php" class="btn-nav">Respuestas</a>
@@ -29,19 +29,19 @@
 	<div class="main-equipo">
 		<div class="miembro">
 			<a href="https://www.linkedin.com/in/joaquin-montesinos/" target="_blank">
-				<img src="assets/img/equipo/joaquin-montesinos.jpeg" alt="Joaquin Montesinos">
+				<img src="assets/img/equipo/joaquin-montesinos-min.jpeg" alt="Joaquin Montesinos">
 			</a>
 			<p class="nombre">Joaquin Montesinos</p>
 	    </div>
 		<div class="miembro">
 			<a href="https://www.linkedin.com/in/valeriaharovalle/" target="_blank">
-				<img src="assets/img/equipo/valeria-haro.jpg" alt="Valeria Haro">
+				<img src="assets/img/equipo/valeria-haro-min.jpg" alt="Valeria Haro">
 			</a>
 			<p class="nombre">Valeria Haro</p>
 	    </div>		
 		<div class="miembro">
 			<a href="https://www.linkedin.com/in/victor-callejas-fuentes/" target="_blank">
-				<img src="assets/img/equipo/victor-callejas.jpg" alt="Victor Callejas">
+				<img src="assets/img/equipo/victor-callejas-min.jpg" alt="Victor Callejas">
 			</a>
 			<p class="nombre">Víctor Callejas Fuentes</p>
 	    </div>		
@@ -76,13 +76,13 @@
     <!-- FOOTER -->
     <footer>
 		<div class="footer-box">
-			<img src="assets/img/logo-cajamarhack.png" alt="Cajamar UniversityHack 2019">
-        	<img src="assets/img/logo-datalab.png" alt="Cajamar Datalab">
+			<img src="assets/img/logo-cajamarhack-min.png" alt="Cajamar UniversityHack 2019">
+        	<img src="assets/img/logo-datalab-min.png" alt="Cajamar Datalab">
 	  </div>
         <a class="btn-nav pointer" id="btn-contact" title="Mandar email">Contact us</a>
 		<div class="footer-box">
-			<img src="assets/img/logo-etsinf.png" alt="Escuela Superior de ingenieria informatica">
-        	<img src="assets/img/logo-upv.png" alt="Universidad Politecnica de alencia">
+			<img src="assets/img/logo-etsinf-min.png" alt="Escuela Superior de ingenieria informatica">
+        	<img src="assets/img/logo-upv-min.png" alt="Universidad Politecnica de alencia">
 		</div>
         
 </footer>

@@ -9,13 +9,13 @@
         <title>Stranger Data</title>
 
         <!-- FAVICON -->
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-min.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-min.png">
     </head>
 
     <body>
     <header>
-	   	<a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
+	   	<a href="index.php" id="home"><img src="assets/img/strangerData-min.png" alt="Inicio"></a>
 		<nav>
 			<a href="aplicacion.php" class="btn-nav">Aplicacion</a>
 			<a href="respuesta.php" class="btn-nav">Respuestas</a>
@@ -30,7 +30,7 @@
 	<h2>La historia que cuentan los datos</h2>	
 		
 	<div class="media">
-		<img class="r-img" src="assets/img/r/e3.png" alt="">
+		<img class="r-img" src="assets/img/r/e3-min.png" alt="">
 	</div>
 		
 	<section class="section section-light">
@@ -41,8 +41,8 @@
 		<a href="https://s3.us-east-2.amazonaws.com/strangerdata/Estudio-ocupacion-renta.ipynb">Download R Jupyter Notebook</a>
 	</section>
 <div class="media">
-		<img class="r-img" src="assets/img/r/e1.png" alt="">
-		<img class="r-img" src="assets/img/r/e2.png" alt="">
+		<img class="r-img" src="assets/img/r/e1-min.png" alt="">
+		<img class="r-img" src="assets/img/r/e2-min.png" alt="">
 	</div>
 		
 	<section class="section section-light">
@@ -56,7 +56,7 @@
 	</section>
 		
 	<div class="media">
-		<img class="r-img" src="assets/img/r/e9.png" alt="">
+		<img class="r-img" src="assets/img/r/e9-min.png" alt="">
 	</div>
 		
 	<section class="section section-light">
@@ -68,8 +68,8 @@
 	</section>
 		
 	<div class="media">
-		<img class="r-img" src="assets/img/r/e7.png" alt="">
-		<img class="r-img" src="assets/img/r/e8.png" alt="">
+		<img class="r-img" src="assets/img/r/e7-min.png" alt="">
+		<img class="r-img" src="assets/img/r/e8-min.png" alt="">
 	</div>
 	
 	<section class="section section-light">
@@ -83,8 +83,8 @@
 	</section>
 		
 	<div class="media">
-		<img class="r-img" src="assets/img/r/e5.png" alt="">
-		<img class="r-img" src="assets/img/r/e6.png" alt="">
+		<img class="r-img" src="assets/img/r/e5-min.png" alt="">
+		<img class="r-img" src="assets/img/r/e6-min.png" alt="">
 	</div>
 		
 	<section class="section section-light">
@@ -99,7 +99,7 @@
 	</section>
 		
 	<div class="media">
-		<img class="r-img" src="assets/img/r/e4.png" alt="">
+		<img class="r-img" src="assets/img/r/e4-min.png" alt="">
 	</div>
 		
 	</div>
@@ -135,13 +135,13 @@
     <!-- FOOTER -->
     <footer>
 		<div class="footer-box">
-			<img src="assets/img/logo-cajamarhack.png" alt="Cajamar UniversityHack 2019">
-        	<img src="assets/img/logo-datalab.png" alt="Cajamar Datalab">
+			<img src="assets/img/logo-cajamarhack-min.png" alt="Cajamar UniversityHack 2019">
+        	<img src="assets/img/logo-datalab-min.png" alt="Cajamar Datalab">
 		</div>
         <a class="btn-nav pointer" id="btn-contact" title="Mandar email">Contact us</a>
 		<div class="footer-box">
-			<img src="assets/img/logo-etsinf.png" alt="Escuela Superior de ingenieria informatica">
-        	<img src="assets/img/logo-upv.png" alt="Universidad Politecnica de alencia">
+			<img src="assets/img/logo-etsinf-min.png" alt="Escuela Superior de ingenieria informatica">
+        	<img src="assets/img/logo-upv-min.png" alt="Universidad Politecnica de alencia">
 		</div>
         
     </footer>

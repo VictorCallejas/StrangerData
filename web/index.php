@@ -9,14 +9,14 @@
         <title>Stranger Data</title>
 
         <!-- FAVICON -->
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-min.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-min.png">
     </head>
 
     <body>
 
   <header>
-	  <a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
+	  <a href="index.php" id="home"><img src="assets/img/strangerData-min.png" alt="Inicio"></a>
 	    <nav>
 			<a href="aplicacion.php" class="btn-nav">Aplicacion</a>
 			<a href="respuesta.php" class="btn-nav">Respuestas</a>
@@ -28,7 +28,7 @@
 		
 	<div class="content">
 		<div class="wrapper">
-			<img src="assets/img/favicon/favicon.png" alt="">
+			<img src="assets/img/favicon/favicon-min.png" alt="">
 			<a href="aplicacion.php" id="go-btn" class="btn-nav">Find it</a>
 		</div>	
 	
@@ -36,7 +36,7 @@
 	<section class="section section-dark">
 		  <h2>LA MEJOR OPCION</h2>
 			<p>
-				Encontramos el cajero/oficina que más te <br>según parámetros estáticos y dinámicos
+				Encontramos el cajero/oficina que más te convenga <br> según parámetros estáticos y dinámicos
 				<br>
 				<br>
 				Tenemos en cuenta cajeros de <strong>70 entidades diferentes</strong> y sus respectivos <strong>convenios</strong>,<br> <strong>tiempos de espera</strong> en la oficina...
@@ -74,14 +74,14 @@
     <!-- FOOTER -->
     <footer>
 		<div class="footer-box">
-			<img src="assets/img/logo-cajamarhack.png" alt="Cajamar UniversityHack 2019">
-        	<img src="assets/img/logo-datalab.png" alt="Cajamar Datalab">
+			<img src="assets/img/logo-cajamarhack-min.png" alt="Cajamar UniversityHack 2019">
+        	<img src="assets/img/logo-datalab-min.png" alt="Cajamar Datalab">
 		</div>
         <a title="Mandar email" class="pointer btn-nav" id="btn-contact">Contact us</a>
         
 		<div class="footer-box">
-			<img src="assets/img/logo-etsinf.png" alt="Escuela Superior de ingenieria informatica">
-        	<img src="assets/img/logo-upv.png" alt="Universidad Politecnica de alencia">
+			<img src="assets/img/logo-etsinf-min.png" alt="Escuela Superior de ingenieria informatica">
+        	<img src="assets/img/logo-upv-min.png" alt="Universidad Politecnica de alencia">
 		</div>
         
     </footer>

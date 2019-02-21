@@ -123,6 +123,7 @@ ventana{
 	padding-bottom: 0px;
 	overflow-y:visible;
 	z-index: 52;
+	border-radius: 10px;
 }
 
 
@@ -209,16 +210,16 @@ footer img{
     cursor: pointer;
 }
 /*### RESPONSIVE ###*/
-@media(max-width:570px){
+@media(max-width:750px){
 	body{
 		padding-top: 60px;
 	}
-    header{
-        flex-flow: column;
-    }
-    header nav{
-        flex-flow:row wrap;  
-    }
+	header{
+		
+		display:inline-block;
+		text-align: center;
+	}
+
 }
 
 @media(max-width:450px){

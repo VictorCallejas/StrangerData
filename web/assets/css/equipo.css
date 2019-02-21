@@ -44,3 +44,9 @@
 	}
 	
 }
+@media(max-width:550px){
+	.main-equipo{
+		padding-top: 60px;
+	}
+	
+}

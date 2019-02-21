@@ -9,13 +9,13 @@
         <title>Stranger Data</title>
 
         <!-- FAVICON -->
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-min.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-min.png">
     </head>
 
     <body>
     <header>
-	   	<a href="index.php" id="home"><img src="assets/img/strangerData.png" alt="Inicio"></a>
+	   	<a href="index.php" id="home"><img src="assets/img/strangerData-min.png" alt="Inicio"></a>
 		<nav>
 			<a href="aplicacion.php" class="btn-nav">Aplicacion</a>
 			<a href="respuesta.php" class="btn-nav">Respuestas</a>
@@ -29,51 +29,51 @@
 		
 	<h2>Arquitectura</h2>
 		<div class="wrapper" id="wrapper_arq">
-			<img id="estructura_img" src="assets/img/arq.png" alt="Arquitectura">
+			<img id="estructura_img" src="assets/img/arq-min.png" alt="Arquitectura">
 			<a href="https://s3.us-east-2.amazonaws.com/strangerdata/arq.png" id="go-btn" class="btn-nav">Ver</a>
 		</div>
 		<h4>Infraestructura</h4>
 		<div class="wrapper">
-			<img id="aws_img" src="assets/img/aws.png" alt="Amazon Web Services">
-			<img id="heroku_img" src="assets/img/heroku.png" alt="Heroku">
+			<img id="aws_img" src="assets/img/aws-min.png" alt="Amazon Web Services">
+			<img id="heroku_img" src="assets/img/heroku-min.png" alt="Heroku">
 		</div>
 		
 	<h2>Tecnologias</h2>
 		<h4>Fuentes de datos</h4>
 		<div class="wrapper">
-			<img id="caja_img" src="assets/img/logo-datalab.png" alt="Cajamar Datalab">
-			<img src="assets/img/agencia_tributaria.png" alt="Agencia Tributaria">
+			<img id="caja_img" src="assets/img/logo-datalab-min.png" alt="Cajamar Datalab">
+			<img src="assets/img/agencia_tributaria-min.png" alt="Agencia Tributaria">
 		</div>
 		<h4>Analisis de datos</h4>
 		<div class="wrapper">
-			<img src="assets/img/R.svg.png" alt="R Programming Languaje">
-			<img src="assets/img/jupyter.png" alt="Jupyter Notebooks">
+			<img src="assets/img/R.svg-min.png" alt="R Programming Languaje">
+			<img src="assets/img/jupyter-min.png" alt="Jupyter Notebooks">
 		</div>
 		<h4>Visualizacion de los datos</h4>
 		<div class="wrapper">
-			<img src="assets/img/ggplot2.png" alt="R Studio ggplot2">
+			<img src="assets/img/ggplot2-min.png" alt="R Studio ggplot2">
 		</div>
 		<h4>Frontend</h4>
 		<div class="wrapper">
-			<img id="front_img" src="assets/img/html5png.webp" alt="HTML CSS Jacascript">
+			<img id="front_img" src="assets/img/html5.webp" alt="HTML CSS Javascript">
 		</div>
 		<h4>Backend</h4>
 		<div class="wrapper" id="back_wrapper">
 		
-			<img id="js_img" src="assets/img/js.png" alt="Javascript">
-			<img src="assets/img/php.png" alt="PHP">
-			<img src="assets/img/python.svg" alt="Python">
-			<img src="assets/img/flask.png" alt="Flask">
+			<img id="js_img" src="assets/img/js-min.png" alt="Javascript">
+			<img src="assets/img/php-min.png" alt="PHP">
+			<img src="assets/img/python.png" alt="Python">
+			<img src="assets/img/flask-min.png" alt="Flask">
 		
 		</div>
 		<h4>Database</h4>
 		<div class="wrapper">
-			<img src="assets/img/mysql.png" alt="MySQL">
+			<img src="assets/img/mysql-min.png" alt="MySQL">
 		</div>
 		<h4>APIs</h4>
 		<div class="wrapper">
-			<img id="maps_img" src="assets/img/googlemaps.png" alt="Google Maps API">
-			<img src="assets/img/directions.png" alt="Google Directions API">
+			<img id="maps_img" src="assets/img/googlemaps-min.png" alt="Google Maps API">
+			<img src="assets/img/directions-min.png" alt="Google Directions API">
 		</div>
 	</div>
 		
@@ -103,13 +103,13 @@
     <!-- FOOTER -->
     <footer>
 		<div class="footer-box">
-			<img src="assets/img/logo-cajamarhack.png" alt="Cajamar UniversityHack 2019">
-        	<img src="assets/img/logo-datalab.png" alt="Cajamar Datalab">
+			<img src="assets/img/logo-cajamarhack-min.png" alt="Cajamar UniversityHack 2019">
+        	<img src="assets/img/logo-datalab-min.png" alt="Cajamar Datalab">
 		</div>
         <a class="btn-nav pointer" id="btn-contact" title="Mandar email">Contact us</a>
 		<div class="footer-box">
-			<img src="assets/img/logo-etsinf.png" alt="Escuela Superior de ingenieria informatica">
-        	<img src="assets/img/logo-upv.png" alt="Universidad Politecnica de alencia">
+			<img src="assets/img/logo-etsinf-min.png" alt="Escuela Superior de ingenieria informatica">
+        	<img src="assets/img/logo-upv-min.png" alt="Universidad Politecnica de alencia">
 		</div>
         
     </footer>
