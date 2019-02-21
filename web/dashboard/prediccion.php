@@ -232,16 +232,13 @@ function to_min(s){
 
 function maestra(URL){
       //actualiza parametros de la url
-       actualizarURL_si();
+      actualizarURL_si();
       actualizarURL_no();
 
       //llama a al api con los parametros de origen
       request_URL_nearest_length = $.get(URL, function(ss){
-        console.log("prueba ss");
 		console.log(ss);
-		  console.log("prueba 1");
 		console.log(request_URL_nearest_length.responseJSON.cajeros.length);
-		  console.log("prueba 2");
 		console.log(request_URL_nearest_length.responseJSON.length);
       });
       //cuando se tenga respuest, entoces selecciona lat y long que seran de destino
