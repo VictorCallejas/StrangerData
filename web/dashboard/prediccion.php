@@ -2,9 +2,11 @@
 <h1> Opciones de recomendación de ruta </h1>
 
 <h2> Ubicación: </h2>
-<div> <input type="checkbox" value="10" id="Ubicacion_Actual" />Ubicación actual </div>
-<div> <input type="textbox" id="Ubicacion_Diferente" />Añada la ubicación de origen </div>
- 
+
+<div> <input type="checkbox" name="Ubicacion"  value="11" id="Ubicacion" />Ubicación actual </div>
+<div><input id="pac-input" class="controls" type="text" placeholder="Añada la ubicación de origen"></div>
+
+
 <h2> Busco: </h2>
 <div> <input type="checkbox" value="8" id="Busca_Oficina" />Busca Oficina </div>
 <div> <input type="checkbox" value="9" id="Busca_Cajero" />Busca Cajero </div> 
@@ -36,12 +38,6 @@
 
 
 
-<?php
-include 'conexionbbdd.php';
- 
-$query  = "SELECT * FROM cajeros limit 10";
-//$query2  = "SELECT * FROM oficinas limit 10";
-?>  
 <script>   
 var map;
 var layer;
@@ -81,8 +77,8 @@ var hora_url=11; ///hora de salida
 var dia_url="2019-02-15"; ///dia de salida
 var numero_recomendaciones=5; //numero de resultados que quiere que le recomiende 
 ////////// parametros front
-var origin_latitud=39.4248751;
-var origin_longitud=-3.3976291;
+var origin_latitud=39;
+var origin_longitud=-3;
 var destination_latitud_val=[];
 var destination_longitud_val=[];
 var destination_latitud=0;
@@ -91,9 +87,16 @@ var coche_url="si";
 var andando_url="no";
 var transporte_publico_url="no";
 var bici_url="no"; 
+var bound_activo=0;
 var URL; 
+var bounds;
+bounds = new google.maps.LatLngBounds();
+  
 
 
+
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(showPosition);}
 ///////// api back
 var URL_no="http://13.58.140.28:5000/nearest?ubicado=no&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
 var URL_si="http://13.58.140.28:5000/nearest?ubicado=si&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
@@ -143,8 +146,9 @@ function to_min(s){
 
 function maestra(URL){
       //actualiza parametros de la url
-      actualizarURL_si();
+       actualizarURL_si();
       actualizarURL_no();
+
       //llama a al api con los parametros de origen
       request_URL_nearest_length = $.get(URL, function(ss){
         console.log(ss);
@@ -157,8 +161,8 @@ function maestra(URL){
           }
           //llamo x n veces al api de google para obtener tiempo y camino
           for(var i=0; i<request_URL_nearest_length.responseJSON.cajeros.length; i++){       
-               destination_longitud=destination_latitud_val[i];
-               destination_latitud=destination_longitud_val[i];
+               destination_latitud=destination_latitud_val[i];
+               destination_longitud=destination_longitud_val[i];
                 actualizar_nearest_tiempo();
                 actualizar_nearest();          
               request_URL_nearest[i] = $.get(URL_nearest, function(respuesta){
@@ -179,13 +183,12 @@ function maestra(URL){
                    }
   
           //selecciono el cajero mas cercano, sabiendo la posicion del array del mejor ponderado
-                  
+ 
                   for(var i=0; i<request_duration_URL_nearest.length; i++){
                     if(i==account_time.indexOf(Math.max.apply(Math,account_time))){
                        jArray = JSON.parse(request_URL_nearest[i].responseText);
                     }                       
                   }
-
           /// todos los puntos del camino.
                   for(var i=0; i<jArray.length; i++){
                       var aux = jArray[i];
@@ -195,11 +198,14 @@ function maestra(URL){
                       var long = parseFloat(str[1]);
                       longitud_makers[i] = long;
                       markers[i] = new google.maps.LatLng(latitud_makers[i], longitud_makers[i]); 
+                      bounds.extend(markers[i]);
+
                    }
           ///punto unicial y final
                  punto_final_no_tocar = {lat: latitud_makers[jArray.length-1], lng: longitud_makers[jArray.length-1]};
                  punto_inicial_no_tocar = {lat: latitud_makers[0], lng: longitud_makers[0]};
           ////inicializo el mapa
+          bound_activo=1;
                  initMap();
 
           });
@@ -209,7 +215,52 @@ function maestra(URL){
 function maestra_no_ubicado(URL){}
  
 //guardo setup de las llamadas ajax, para que no me almacene en cache.
-$.ajaxSetup({cache: false, dataType: "jsonp", crossDomain: true });
+$.ajaxSetup({cache: false});
+ 
+
+function showPosition(position) {
+  origin_latitud = position.coords.latitude;
+   origin_longitud = position.coords.longitude;
+   
+}
+
+/*******Ubicacion********/
+//Ubicacion  
+$(document).ready(function() {
+    //set initial state.
+    $('#Ubicacion').change(function() {
+        if($(this).is(":checked")) {
+            ubicado="si"; 
+            if (navigator.geolocation) {
+               navigator.geolocation.getCurrentPosition(showPosition);
+
+
+            } else {
+              x.innerHTML = "Geolocation is not supported by this browser.";
+            }  
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }else{
+            ubicado="no"; 
+          if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
+        }
+     });
+});
+
+
+//Ubicacion por texto 
+function initAutocomplete() {
+    var input = document.getElementById('pac-input');
+    var searchBox = new google.maps.places.SearchBox(input);
+    searchBox.addListener('places_changed', function() {
+      var places = searchBox.getPlaces();
+      if (places.length == 0) { return; }
+        places.forEach(function(place) { 
+          alert("guardar aqui las coordenadas " + place.geometry.location ) 
+        });
+     });
+  }
+
+
 
 /*******Posibilidades********/
 //Libreta 
@@ -365,6 +416,11 @@ function initMap() {
       mapTypeIds: [customMapTypeId]
     }
   });
+    if(bound_activo==0){
+    }else{
+      map.fitBounds(bounds);
+    }
+
 
 
    var iconsetngs = {
