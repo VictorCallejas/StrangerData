@@ -105,7 +105,7 @@ var URL_si="http://13.58.140.28:5000/nearest?ubicado=si&latitud="+origin_latitud
 /////// api front
 var URL_nearest="https://strangerdata.club/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
  var URL_nearest_time="https://strangerdata.club/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
-
+ 
  
 /////// actualizarURL_si
 function actualizarURL_si(){
