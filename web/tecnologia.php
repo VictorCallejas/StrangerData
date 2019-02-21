@@ -26,7 +26,6 @@
 		
 		
 	<div class="main2">
-		
 	<h2>Arquitectura</h2>
 		<div class="wrapper" id="wrapper_arq">
 			<img id="estructura_img" src="assets/img/arq-min.png" alt="Arquitectura">

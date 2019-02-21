@@ -1,41 +1,128 @@
- <br><br><br>
-<h1> Opciones de recomendación de ruta </h1>
 
-<h2> Ubicación: </h2>
-
-<div> <input type="checkbox" name="Ubicacion"  value="11" id="Ubicacion" />Ubicación actual </div>
-<div><input id="pac-input" class="controls" type="text" placeholder="Añada la ubicación de origen"></div>
+<div id="map-box">
+	<div id="map"></div>
+</div>
 
 
-<h2> Busco: </h2>
-<div> <input type="checkbox" value="8" id="Busca_Oficina" />Busca Oficina </div>
-<div> <input type="checkbox" value="9" id="Busca_Cajero" />Busca Cajero </div> 
+<div id="filtros">
+	<div id="filtros-box">
+	
+	<h2> Ubicación: </h2>
+	<div class="grupo">
+	<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch11" id="Ubicacion"/>
+        <div class="state p-success">
+            <label>Usar ubicacion actual</label>
+        </div>
+	</div>
+		
+	<!--<div class="pretty p-switch p-fill">
+        <input type="checkbox" id="pac-input" class="controls" type="text" placeholder="Añada la ubicación de origen"/>
+        <div class="state">
+            <label>Fill</label>
+        </div>
+    </div>-->
+	</div>
+	
+	
 
-<h2> Busco entidades que tengan: </h2>
-<div> <input type="checkbox" value="1" id="Libreta" />Libreta </div>
-<div> <input type="checkbox" value="2" id="Ingreso" />Ingreso </div>
-<div> <input type="checkbox" value="3" id="Recibos" />Recibos </div>
-<div> <input type="checkbox" value="4" id="Contactless" />Contactless </div>
-<div> <input type="checkbox" value="5" id="Transferencia" />Transferencia </div>
-<div> <input type="checkbox" value="6" id="Extraer" />Extraer </div>
-<div> <input type="checkbox" value="7" id="Con_Saldo" />Con Saldo </div>
+	<h2> Busco: </h2>
+	<div class="grupo">
+	<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch10" id="Busca_Oficina"/>
+        <div class="state p-success">
+            <label>Busca Oficina</label>
+        </div>
+    </div>
+	<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch9" id="Busca_Cajero"/>
+        <div class="state p-success">
+            <label>Busca Cajero</label>
+        </div>
+    </div>
+	</div>
 
- <h2 > Como desea ir: </h2>
-<input  type="radio"  name="rutas" id="Coche"/> Coche <br>
-<input  type="radio"  name="rutas" id="andando"/> Andando <br>
-<input  type="radio"  name="rutas" id="transporte_publico"/> Transporte Público <br>
-<input  type="radio"  name="rutas" id="bici"/> Bici <br>
+	<h2> Busco entidades que tengan: </h2>
+	<div class="grupo">
+	<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch8" id="Libreta"/>
+        <div class="state p-success">
+        <label>Libreta</label>
+        </div>
+    </div>
+			<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch7" id="Ingreso"/>
+        <div class="state p-success">
+            <label>Ingreso</label>
+        </div>
+    </div>
+			<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch6" id="Recibos"/>
+        <div class="state p-success">
+            <label>Recibos</label>
+        </div>
+    </div>
+			<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch5" id="Contactless"/>
+        <div class="state p-success">
+            <label>Contactless</label>
+        </div>
+    </div>
+			<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch4" id="Transferencia"/>
+        <div class="state p-success">
+            <label>Transferencia</label>
+        </div>
+    </div>
+			<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch3" id="Extraer"/>
+        <div class="state p-success">
+            <label>Extraer</label>
+        </div>
+    </div>
+			<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch2" id="Con_Saldo"/>
+        <div class="state p-success">
+            <label>Consultar saldo</label>
+        </div>
+    </div>
+	</div>
 
-                      
-  <br><br><br>
+	<h2> Como desea ir: </h2>
+	<div class="grupo">
+	<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch1" id="Coche"/>
+        <div class="state p-success">
+            <label>Coche</label>
+        </div>
+    </div>
+			<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch1" id="andando"/>
+        <div class="state p-success">
+            <label>Andando</label>
+        </div>
+    </div>
+			<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch1" id="transporte_publico"/>
+        <div class="state p-success">
+            <label>Transporte Público</label>
+        </div>
+		</div>
+		<div class="pretty p-switch p-fill">
+        <input type="radio" name="switch1" id="bici"/>
+        <div class="state p-success">
+            <label>Bicicleta</label>
+        </div>
+		</div>
+	</div>
 
-<div style="height:700px; width:1000px;" id="map"></div>
+	
+	</div>
+	
+</div>
+		
 
-    <!-- javascripts -->
-    <script src="dashboard/js/jquery.js"></script>
-     <script src="dashboard/js/jquery-ui-1.9.2.custom.min.js"></script>
-     <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyA_i6oWqxHiZThh7uzo9UZxg3gShyhqGvU"></script>
-
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyA_i6oWqxHiZThh7uzo9UZxg3gShyhqGvU"></script>
 
 
 <script>   
@@ -98,8 +185,8 @@ bounds = new google.maps.LatLngBounds();
 if (navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(showPosition);}
 ///////// api back
-var URL_no="http://13.58.140.28:5000/nearest?ubicado=no&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
-var URL_si="http://13.58.140.28:5000/nearest?ubicado=si&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
+var URL_no="https://qmiets.tk:5000/nearest?ubicado=no&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
+var URL_si="https://qmiets.tk:5000/nearest?ubicado=si&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
 
 /////// api front
 var URL_nearest="http://localhost:8888/StrangerData/web/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
@@ -108,11 +195,11 @@ var URL_nearest="http://localhost:8888/StrangerData/web/dashboard/respuesta.php?
  
 /////// actualizarURL_si
 function actualizarURL_si(){
-  URL_no="http://13.58.140.28:5000/nearest?ubicado=no&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
+  URL_no="https://qmiets.tk:5000/nearest?ubicado=no&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
 }
 /////// actualizarURL_no
 function actualizarURL_no(){
-  URL_si="http://13.58.140.28:5000/nearest?ubicado=si&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
+  URL_si="https://qmiets.tk:5000/nearest?ubicado=si&latitud="+origin_latitud+"&longitud="+origin_longitud+"&libreta="+libreta_url+"&ingreso="+ingreso_url+"&recibos="+recibos_url+"&contactless="+contactless_url+"&transferencia="+transferencia_url+"&extraer="+extraer_url+"&con_saldo="+con_saldo_url+"&busca_oficina_url="+busca_oficina_url+"&busca_cajero_url="+busca_cajero_url+"&pertenece_banco_url="+pertenece_banco_url+"&busca_bancos_url="+busca_bancos_url+"&dispuesto_url="+dispuesto_url+"&hora_url="+hora_url+"&dia_url="+dia_url+"&numero_recomendaciones="+numero_recomendaciones;
 }
 
 function actualizar_nearest(){

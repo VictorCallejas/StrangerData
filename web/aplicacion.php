@@ -24,25 +24,16 @@
 		</nav>
 	</header>
 		
-		
-		
-		
-	<div class="main">
-				
- 		<?php
-  require_once('dashboard/prediccion.php'); 
-?>    
- 		
-		
+
+	<div class="main5">
+	
+		<?php require_once('dashboard/prediccion.php'); ?>
+ 	    		
 	</div>	
-		
-		
-		
-		
-		
+	
 		
 <!-- MANDAR EMAIL -->
-	<div class="modal1">
+<div class="modal1">
 	<div class="ventana" id="email_div">
 		<div class="email_formulario">
 			<form action="contact.php" method="post">
@@ -78,9 +69,11 @@
         
     </footer>
     <!-- SCRIPTS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"/>		
+	<link rel="stylesheet" type="text/css" href="dashboard/style_app.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/proyecto.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/aplication.css">
 	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
     </body>

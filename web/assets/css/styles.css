@@ -128,7 +128,7 @@ ventana{
 
 
 /*### FORMULARIO ###*/
-label {
+#label_mensaje, #label_email, #label_nombre {
     padding-right: 8px;
 	padding-left: 8px;
 	text-align: center;
@@ -147,8 +147,7 @@ form {
 	text-align: center;
 	align-items: center;
 }
- 
-input, textarea {
+ #nombre, #email,#submit, #mensaje  {
     width:300px;
     height:31px;
     background:#fff;
@@ -175,7 +174,9 @@ textarea {
 #submit:hover {
 background: #f56f3a;
 }
-
+#label_email, #label_mensaje, #label_nombre{
+	color:#000000;
+}
 
 footer{
     display: inline-flex;

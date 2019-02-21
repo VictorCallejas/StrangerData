@@ -1,28 +1,48 @@
-.aplication-main div {
-	width: 50%;
-}
-.mapa{
+.main5{
 	height: 100%;
-	width: 50%;
-	display:flex;
+	min-height: 100%;
+	width: 100%;
+	display: inline-flex;
+}
+body {
+	color: #ffffff;
+	background: #232f3d;
+	min-height:100%;
+}
+@media(max-width:1000px){
+.main5{
+	display: block;
+	margin :auto;
+	height:200%;;
+}
+#filtros{
+	width: 100%;
+	height: 50%;
+	display: flex;
 	justify-content: center;
+	align-items: center;
+	min-height: 50%;
+
+}
+#filtros-box{
+	height: 90%;
+	width: 90%;
 	text-align: center;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 }
-.mapa iframe{
-	width: 80%;
-	height: 80%;
+#map-box{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-@media(max-width:950px){
-	.aplication-main{
-		flex-direction: column;
-		height: auto;
-		width: 100%;
-		padding-top: 107px;
-    }
-	.mapa{
-		height:100vh;
-		width: 100%;
-		padding-bottom:107px;
-    }
+#map{
+	width: 90%;
+	height: 90%;
+}
 }
