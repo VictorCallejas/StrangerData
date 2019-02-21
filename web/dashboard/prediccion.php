@@ -238,8 +238,6 @@ function maestra(URL){
       //llama a al api con los parametros de origen
       request_URL_nearest_length = $.get(URL, function(ss){
 		console.log(ss);
-		console.log(request_URL_nearest_length.responseJSON.cajeros.length);
-		console.log(request_URL_nearest_length.responseJSON.length);
       });
       //cuando se tenga respuest, entoces selecciona lat y long que seran de destino
       $.when(request_URL_nearest_length).done(function(msg) {
