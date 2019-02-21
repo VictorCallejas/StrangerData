@@ -14,6 +14,7 @@
     </head>
 
     <body>
+	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
     <header>
 	   	<a href="index.php" id="home"><img src="assets/img/strangerData-min.png" alt="Inicio"></a>
 		<nav>
@@ -74,7 +75,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/aplication.css">
-	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+	
 	<script type="text/javascript" src="assets/js/main.js"></script>
     </body>
 </html>
