@@ -360,7 +360,7 @@ $(document).ready(function(){
 $(document).ready(function() {
     //set initial state.
     $('#Ubicacion').change(function() {
-        if($(this).is(":checked")) {
+        if(this.checked === true) {
 
             ubicado="si"; 
             if (navigator.geolocation) {
