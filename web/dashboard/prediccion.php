@@ -402,12 +402,14 @@ function initAutocomplete() {
 $(document).ready(function() {
     //set initial state.
     $('#Libreta').change(function() {
-        if($(this).is(":checked")) {
+        if(this.checked === true) {
+          console.log('libreta checked true');
           libreta_url="si";
           if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);  console.log(URL_no);
 }
         }else{
           libreta_url="no";
+          console.log('libreta checked false');
           if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
         }
      });
