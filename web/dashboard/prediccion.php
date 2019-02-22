@@ -360,7 +360,7 @@ $(document).ready(function(){
 $(document).ready(function() {
     //set initial state.
     $('#Ubicacion').change(function() {
-        if(this.checked === true) {
+        if($(this).is(":checked")) {
 
             ubicado="si"; 
             if (navigator.geolocation) {
@@ -399,10 +399,10 @@ function initAutocomplete() {
 
 /*******Posibilidades********/
 //Libreta 
-$(document).ready(function() {
+/*$(document).ready(function() {
     //set initial state.
     $('#Libreta').change(function() {
-        if(this.checked === true) {
+        if($(this).is(":checked")) {
           console.log('libreta checked true');
           libreta_url="si";
           if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);  console.log(URL_no);
@@ -413,7 +413,7 @@ $(document).ready(function() {
           if(ubicado == "si"){maestra(URL_si);}else{ maestra_no_ubicado(URL_no);}
         }
      });
-});
+});*/
 //Ingreso 
 $(document).ready(function() {
     //set initial state.
