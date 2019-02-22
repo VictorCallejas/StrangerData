@@ -13,7 +13,7 @@
   <h2> Ubicación: </h2>
   <div class="grupo">
   <div class="pretty p-switch p-fill">
-        <input type="radio" name="switch11" id="Ubicacion" />
+        <input Y name="switch11" id="Ubicacion" />
         <div class="state p-success">
             <label>Usar ubicacion actual</label>
         </div>
@@ -32,13 +32,13 @@
   <h2> Busco: </h2>
   <div class="grupo">
   <div class="pretty p-switch p-fill">
-        <input type="radio" name="switch10" id="Busca_Oficina"/>
+        <input Y name="switch10" id="Busca_Oficina"/>
         <div class="state p-success">
             <label>Busca Oficina</label>
         </div>
     </div>
   <div class="pretty p-switch p-fill">
-        <input type="radio" name="switch9" id="Busca_Cajero"/>
+        <input type="checkbox" name="switch9" id="Busca_Cajero"/>
         <div class="state p-success">
             <label>Busca Cajero</label>
         </div>
@@ -48,43 +48,43 @@
   <h2> Busco entidades que tengan: </h2>
   <div class="grupo">
   <div class="pretty p-switch p-fill">
-        <input type="radio" name="switch8" id="Libreta"/>
+        <input type="checkbox" name="switch8" id="Libreta"/>
         <div class="state p-success">
         <label>Libreta</label>
         </div>
     </div>
       <div class="pretty p-switch p-fill">
-        <input type="radio" name="switch7" id="Ingreso"/>
+        <input type="checkbox" name="switch7" id="Ingreso"/>
         <div class="state p-success">
             <label>Ingreso</label>
         </div>
     </div>
       <div class="pretty p-switch p-fill">
-        <input type="radio" name="switch6" id="Recibos"/>
+        <input type="checkbox" name="switch6" id="Recibos"/>
         <div class="state p-success">
             <label>Recibos</label>
         </div>
     </div>
       <div class="pretty p-switch p-fill">
-        <input type="radio" name="switch5" id="Contactless"/>
+        <input type="checkbox" name="switch5" id="Contactless"/>
         <div class="state p-success">
             <label>Contactless</label>
         </div>
     </div>
       <div class="pretty p-switch p-fill">
-        <input type="radio" name="switch4" id="Transferencia"/>
+        <input type="checkbox" name="switch4" id="Transferencia"/>
         <div class="state p-success">
             <label>Transferencia</label>
         </div>
     </div>
       <div class="pretty p-switch p-fill">
-        <input type="radio" name="switch3" id="Extraer"/>
+        <input type="checkbox" name="switch3" id="Extraer"/>
         <div class="state p-success">
             <label>Extraer</label>
         </div>
     </div>
       <div class="pretty p-switch p-fill">
-        <input type="radio" name="switch2" id="Con_Saldo"/>
+        <input type="checkbox" name="switch2" id="Con_Saldo"/>
         <div class="state p-success">
             <label>Consultar saldo</label>
         </div>
