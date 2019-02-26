@@ -851,7 +851,7 @@ if(ubicado=="si"){
 
   }
 
-   function showMarkerByLatLng2(pos, infoWindowTitle,infoWindowText,infoWindowText2,infoWindowText3, infoWindowText4, imageMarker){
+   function showMarkerByLatLng2(pos, infoWindowTitle,infoWindowText,infoWindowText2,infoWindowText3, infoWindowText4, imageMarker2){
       var myMarker2 = new google.maps.Marker();
       
       myMarker2.setMap(map);
@@ -980,4 +980,3 @@ if(ubicado=="si"){
  
  window.onload = initMap;
 </script>
-
