@@ -579,8 +579,7 @@ $(document).ready(function() {
 
 
 
-  URL_nearest="http://localhost:8888/StrangerData/web/dashboard/respuesta.php?origin_latitud="+origin_latitud+"&origin_longitud="+origin_longitud+"&destination_latitud="+destination_latitud+"&destination_longitud="+destination_longitud+"&andando="+andando_url+"coche="+coche_url+"transporte_publico="+transporte_publico_url+"bici="+bici_url+"&hora_url="+hora_url+"&dia_url="+dia_url;
-
+ 
 
 
 //andando 
@@ -754,14 +753,14 @@ function initMap() {
      
    var markador2 = new google.maps.Marker({
     position: punto_final_no_tocar,
-    icon: { url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"},
+    icon: { url: "https://maps.google.com/mapfiles/ms/icons/green-dot.png"},
     map: map,
     title: 'Punto recomendado'
    });
 
    var markador = new google.maps.Marker({
     position: punto_inicial_no_tocar,
-    icon: { url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"},
+    icon: { url: "https://maps.google.com/mapfiles/ms/icons/green-dot.png"},
     map: map,
     title: 'Punto de partida'
    });
@@ -785,7 +784,7 @@ function initMap() {
         var pos = markers[i];
           var marker = new google.maps.Marker({
             position: pos,             
-            icon: { url: "http://maps.google.com/mapfiles/ms/icons/none.png"},
+            icon: { url: "https://maps.google.com/mapfiles/ms/icons/none.png"},
             map: map
         });
        path[z].push(marker.getPosition()); //PUSH THE NEWLY CREATED MARKER'S POSITION TO THE PATH ARRAY
@@ -823,7 +822,7 @@ if(ubicado=="si"){
               '</div>' +
               '<h2>'+infoWindowTitle+'</h2>' +
               '<div>' +
-              "poblacion: "+
+              "Municipio: "+
               infoWindowText+
               '</div>' +
               '<div>' +
@@ -858,7 +857,7 @@ if(ubicado=="si"){
       
       myMarker2.setPosition(pos);
       if(imageMarker2!=false){
-      myMarker2.setIcon("http://maps.google.com/mapfiles/ms/icons/blue-dot.png");
+      myMarker2.setIcon("https://maps.google.com/mapfiles/ms/icons/blue-dot.png");
       }
       
       var myMarker2ContentString = '<div style="color:black;" id="content">' +
@@ -866,7 +865,7 @@ if(ubicado=="si"){
               '</div>' +
               '<h2>'+infoWindowTitle+'</h2>' +
               '<div>' +
-              "poblacion: "+
+              "Municipio: "+
               infoWindowText+
               '</div>' +
               '<div>' +
@@ -947,10 +946,10 @@ if(ubicado=="si"){
       
       myMarker2.setPosition(pos);
       if(imageMarker2!=false){
-      myMarker2.setIcon("http://maps.google.com/mapfiles/ms/icons/blue-dot.png");
+      myMarker2.setIcon("https://maps.google.com/mapfiles/ms/icons/blue-dot.png");
       }
       
- var myMarker1ContentString = '<div style="color:black;" id="content">' +
+ var myMarker2ContentString = '<div style="color:black;" id="content">' +
               '<div id="siteNotice">' +
               '</div>' +
               '<h2>'+infoWindowTitle+'</h2>' +
@@ -980,3 +979,4 @@ if(ubicado=="si"){
  
  window.onload = initMap;
 </script>
+
