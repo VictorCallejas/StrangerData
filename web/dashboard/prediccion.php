@@ -798,16 +798,16 @@ if(ubicado=="si"){
   if(marker_value!=0){
       for(var i=0; i<request_URL_nearest_length.responseJSON.cajeros.length; i++){
             if(request_URL_nearest_length.responseJSON.cajeros[i].tipo=="oficina"){
-               showMarkerByLatLng(new google.maps.LatLng(destination_latitud_val[i],destination_longitud_val[i]), request_URL_nearest_length.responseJSON.cajeros[i].direccion, request_URL_nearest_length.responseJSON.cajeros[i].distancia, to_min(request_duration_URL_nearest[i].responseText),request_URL_nearest_length.responseJSON.cajeros[i].estado_estimado); 
+               showMarkerByLatLng(new google.maps.LatLng(destination_latitud_val[i],destination_longitud_val[i]), request_URL_nearest_length.responseJSON.cajeros[i].direccion, request_URL_nearest_length.responseJSON.cajeros[i].poblacion, request_URL_nearest_length.responseJSON.cajeros[i].distancia, to_min(request_duration_URL_nearest[i].responseText),request_URL_nearest_length.responseJSON.cajeros[i].estado_estimado); 
               }else if(request_URL_nearest_length.responseJSON.cajeros[i].tipo=="cajero"){
-               showMarkerByLatLng2(new google.maps.LatLng(destination_latitud_val[i],destination_longitud_val[i]), request_URL_nearest_length.responseJSON.cajeros[i].direccion, request_URL_nearest_length.responseJSON.cajeros[i].distancia, to_min(request_duration_URL_nearest[i].responseText),request_URL_nearest_length.responseJSON.cajeros[i].estado_estimado); 
+               showMarkerByLatLng2(new google.maps.LatLng(destination_latitud_val[i],destination_longitud_val[i]), request_URL_nearest_length.responseJSON.cajeros[i].direccion, request_URL_nearest_length.responseJSON.cajeros[i].poblacion, request_URL_nearest_length.responseJSON.cajeros[i].distancia, to_min(request_duration_URL_nearest[i].responseText),request_URL_nearest_length.responseJSON.cajeros[i].estado_estimado); 
               } 
           }
   }else{
   }
     
  
-  function showMarkerByLatLng(pos, infoWindowTitle,infoWindowText,infoWindowText2,infoWindowText3, imageMarker){
+  function showMarkerByLatLng(pos, infoWindowTitle,infoWindowText,infoWindowText2,infoWindowText3, infoWindowText4, imageMarker){
       var myMarker1 = new google.maps.Marker();
       
       myMarker1.setMap(map);
@@ -823,18 +823,22 @@ if(ubicado=="si"){
               '</div>' +
               '<h2>'+infoWindowTitle+'</h2>' +
               '<div>' +
-              "Distancia: "+
+              "poblacion: "+
               infoWindowText+
-              " km" +
               '</div>' +
               '<div>' +
-              "Tiempo en llegar: "+
+              "Distancia: "+
               infoWindowText2+
               " min" +
               '</div>' +
               '<div>' +
-              "Tiempo de espera: "+
+              "Tiempo en llegar: "+
               infoWindowText3+
+              " min" +
+              '</div>' +
+              '<div>' +
+              "Tiempo de espera: "+
+              infoWindowText4+
               " min" +
               '</div>' +
               '</div>';
@@ -847,7 +851,7 @@ if(ubicado=="si"){
 
   }
 
-   function showMarkerByLatLng2(pos, infoWindowTitle,infoWindowText,infoWindowText2,infoWindowText3, imageMarker2){
+   function showMarkerByLatLng2(pos, infoWindowTitle,infoWindowText,infoWindowText2,infoWindowText3, infoWindowText4, imageMarker){
       var myMarker2 = new google.maps.Marker();
       
       myMarker2.setMap(map);
@@ -862,18 +866,22 @@ if(ubicado=="si"){
               '</div>' +
               '<h2>'+infoWindowTitle+'</h2>' +
               '<div>' +
-              "Distancia: "+
+              "poblacion: "+
               infoWindowText+
-              " km" +
               '</div>' +
               '<div>' +
-              "Tiempo en llegar: "+
+              "Distancia: "+
               infoWindowText2+
               " min" +
               '</div>' +
               '<div>' +
-              "Tiempo de espera: "+
+              "Tiempo en llegar: "+
               infoWindowText3+
+              " min" +
+              '</div>' +
+              '<div>' +
+              "Tiempo de espera: "+
+              infoWindowText4+
               " min" +
               '</div>' +
               '</div>';
@@ -891,15 +899,15 @@ if(ubicado=="si"){
   if(marker_value!=0){
       for(var i=0; i<request_URL_nearest_length.responseJSON.cajeros.length; i++){
             if(request_URL_nearest_length.responseJSON.cajeros[i].tipo=="oficina"){
-               showMarkerByLatLng3(new google.maps.LatLng(destination_latitud_val[i],destination_longitud_val[i]), request_URL_nearest_length.responseJSON.cajeros[i].direccion,request_URL_nearest_length.responseJSON.cajeros[i].estado_estimado); 
+               showMarkerByLatLng3(new google.maps.LatLng(destination_latitud_val[i],destination_longitud_val[i]), request_URL_nearest_length.responseJSON.cajeros[i].direccion, request_URL_nearest_length.responseJSON.cajeros[i].poblacion, request_URL_nearest_length.responseJSON.cajeros[i].estado_estimado); 
               }else if(request_URL_nearest_length.responseJSON.cajeros[i].tipo=="cajero"){
-               showMarkerByLatLng4(new google.maps.LatLng(destination_latitud_val[i],destination_longitud_val[i]), request_URL_nearest_length.responseJSON.cajeros[i].direccion,request_URL_nearest_length.responseJSON.cajeros[i].estado_estimado); 
+               showMarkerByLatLng4(new google.maps.LatLng(destination_latitud_val[i],destination_longitud_val[i]), request_URL_nearest_length.responseJSON.cajeros[i].direccion, request_URL_nearest_length.responseJSON.cajeros[i].poblacion, request_URL_nearest_length.responseJSON.cajeros[i].estado_estimado); 
               } 
       }
   }else{
   }
 
-  function showMarkerByLatLng3(pos, infoWindowTitle,infoWindowText, imageMarker){
+  function showMarkerByLatLng3(pos, infoWindowTitle,infoWindowText, infoWindowText2, imageMarker){
       var myMarker1 = new google.maps.Marker();
       
       myMarker1.setMap(map);
@@ -914,8 +922,12 @@ if(ubicado=="si"){
               '</div>' +
               '<h2>'+infoWindowTitle+'</h2>' +
               '<div>' +
-              "Tiempo de espera: "+
+              "Municipio: "+
               infoWindowText+
+              '</div>' +
+              '<div>' +
+              "Tiempo de espera: "+
+              infoWindowText2+
               " min" +
               '</div>' +
               '</div>';
@@ -928,7 +940,7 @@ if(ubicado=="si"){
 
   }
 
-   function showMarkerByLatLng4(pos, infoWindowTitle,infoWindowText, imageMarker2){
+   function showMarkerByLatLng4(pos, infoWindowTitle,infoWindowText, infoWindowText2, imageMarker2){
       var myMarker2 = new google.maps.Marker();
       
       myMarker2.setMap(map);
@@ -938,15 +950,20 @@ if(ubicado=="si"){
       myMarker2.setIcon("http://maps.google.com/mapfiles/ms/icons/blue-dot.png");
       }
       
-      var myMarker2ContentString = '<div style="color:black;" id="content">' +
+ var myMarker1ContentString = '<div style="color:black;" id="content">' +
               '<div id="siteNotice">' +
               '</div>' +
               '<h2>'+infoWindowTitle+'</h2>' +
               '<div>' +
-              "Tiempo de espera: "+
+              "Municipio: "+
               infoWindowText+
+              '</div>' +
+              '<div>' +
+              "Tiempo de espera: "+
+              infoWindowText2+
               " min" +
               '</div>' +
+              '</div>';
               '</div>';
       var myMarker2InfoWindow = new google.maps.InfoWindow({
           content: myMarker2ContentString
@@ -963,3 +980,4 @@ if(ubicado=="si"){
  
  window.onload = initMap;
 </script>
+
