@@ -4,3 +4,9 @@ $(document).ready(function(){
 	$(".cerrar_contact").click(function(){$(".modal1").css("display","none");
 	$("#email_div").fadeOut(300)})
 });
+$(document).ready(function(){
+	$("#btn-func").click(function(){$(".modal2").css("display","flex");
+	$("#func-div").fadeIn(100)});
+	$(".cerrar-func").click(function(){$(".modal2").css("display","none");
+	$("#func-div").fadeOut(300)})
+});

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="prediccion.php" server="C:/xampp/htdocs/" local="131952050527265007" remote="131952050520000000" Dst="1" />
-<file name="conexionbbdd.php" server="C:/xampp/htdocs/" local="131950759930807409" remote="131950759930000000" Dst="1" />
-<file name="respuesta.json" server="C:/xampp/htdocs/" local="131950759931909607" remote="131950759930000000" Dst="1" />
-<file name="respuesta.php" server="C:/xampp/htdocs/" local="131950759931959478" remote="131950759930000000" Dst="1" />
-<file name="respuesta_tiempo.php" server="C:/xampp/htdocs/" local="131950759931959478" remote="131950759930000000" Dst="1" />
-<file name="style_app.css" server="C:/xampp/htdocs/" local="131952018838803952" remote="131952018830000000" Dst="1" />
+<file name="prediccion.php" server="C:/xampp/htdocs/" local="131956385106494948" remote="131956385100000000" Dst="1" />
+<file name="conexionbbdd.php" server="C:/xampp/htdocs/" local="131951774773041153" remote="131951774770000000" Dst="1" />
+<file name="respuesta.json" server="C:/xampp/htdocs/" local="131951774773310376" remote="131951774770000000" Dst="1" />
+<file name="respuesta.php" server="C:/xampp/htdocs/" local="131951774773320368" remote="131951774770000000" Dst="1" />
+<file name="respuesta_tiempo.php" server="C:/xampp/htdocs/" local="131951774773320368" remote="131951774770000000" Dst="1" />
+<file name="style_app.css" server="C:/xampp/htdocs/" local="131956359537589182" remote="131956359530000000" Dst="1" />
+<file name="prediccion.js" server="C:/xampp/htdocs/" local="131951867490000000" remote="131951867490000000" Dst="1" />
 </dwsync>

@@ -33,6 +33,24 @@
 	</div>	
 	
 		
+<!-- BTN FUNC -->
+<div class="modal2">
+	<div class="ventana" id="func-div">
+		<div class="func-in">
+			<h4>Como funciona</h4>
+			<br><br>
+			<p>
+				En el mapa se pueden observar los cajeros y oficinas que cumplen los requisitos determinados.
+				<br><br>
+				Si el usuario utiliza su ubicación, en el mapa se mostraran los cajeros/oficinas mas cercanos que cumplen los requisitos determinados. Junto a la recomendación que hace nuestro sistema en base a parámetros en tiempo real como el tiempo que se tarda en llegar según el medio de transporte seleccionado, predicción del tiempo de espera...
+			</p>
+		</div>
+		<div class="cerrar2">
+			<button class="cerrar-func pointer">Cerrar</button>
+		</div>
+		</div>
+	</div>
+		
 <!-- MANDAR EMAIL -->
 <div class="modal1">
 	<div class="ventana" id="email_div">

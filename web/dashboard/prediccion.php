@@ -41,7 +41,7 @@
     </div>
   </div>
 
-  <h2> Busco entidades que tengan: </h2>
+  <h2> Operaciones disponibles: </h2>
   <div class="grupo">
   <div class="pretty p-switch p-fill">
         <input type="checkbox" name="switch8" id="Libreta"/>
@@ -113,9 +113,10 @@
             <label>Bicicleta</label>
         </div>
     </div>
+	  <button class="pointer" id="btn-func">Como funciona</button>
   </div>
 
-  
+
   </div>
   
 </div>
